@@ -204,6 +204,12 @@
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\nav\nav.component.html">
+      <DependentUpon>nav.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\nav\nav.component.scss">
+      <DependentUpon>nav.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\pages\about\about-page.component.html">
       <DependentUpon>about-page.component.ts</DependentUpon>
     </Content>
@@ -234,6 +240,12 @@
     </Content>
     <Content Include="src\app\pages\home\home-page.component.scss">
       <DependentUpon>home-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\not-found\not-found-page.component.html">
+      <DependentUpon>not-found-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\not-found\not-found-page.component.scss">
+      <DependentUpon>not-found-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\pages\services\services-page.component.html">
       <DependentUpon>services-page.component.ts</DependentUpon>
@@ -333,10 +345,13 @@
     <TypeScriptCompile Include="src\app\actions\professional-service.actions.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
+    <TypeScriptCompile Include="src\app\components\nav\index.ts" />
     <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
     <TypeScriptCompile Include="src\app\configuration\index.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />
+    <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\models\digital-asset.model.ts" />
     <TypeScriptCompile Include="src\app\models\index.ts" />
@@ -355,6 +370,7 @@
     <TypeScriptCompile Include="src\app\pages\gallery\index.ts" />
     <TypeScriptCompile Include="src\app\pages\home\index.ts" />
     <TypeScriptCompile Include="src\app\pages\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\not-found\index.ts" />
     <TypeScriptCompile Include="src\app\pages\services\index.ts" />
     <TypeScriptCompile Include="src\app\pages\whats-new\index.ts" />
     <TypeScriptCompile Include="src\app\pipes\index.ts" />
@@ -396,6 +412,8 @@
     <TypeScriptCompile Include="src\app\pages\services\services-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\about\about-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\contact\contact-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\not-found\not-found-page.component.ts" />
+    <TypeScriptCompile Include="src\app\components\nav\nav.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

@@ -6,6 +6,7 @@ import {
 
     AboutPageComponent,
     HomePageComponent,
+    NotFoundPageComponent,
 
     // Admin
 
