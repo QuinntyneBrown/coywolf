@@ -1,1 +1,1 @@
-﻿
+﻿export * from "./professional-service.reducer";

@@ -8,9 +8,15 @@ import "./rxjs-extensions";
 
 import { AppComponent } from './app.component';
 
+import { ActionsModule } from "./actions";
+import { ComponentsModule } from "./components";
+import { RoutingModule, routedComponents } from "./routing";
+import { ServicesModule } from "./services";
+import { StoreModule } from "./store";
 
 const declarables = [
-    AppComponent
+    AppComponent,
+    ...routedComponents
 ];
 
 @NgModule({
