@@ -24,6 +24,11 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
+    <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
+    <TypeScritModuleResolution>Classic</TypeScritModuleResolution>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -193,11 +198,57 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="src\app\app.component.html">
+      <DependentUpon>app.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\app.component.scss">
+      <DependentUpon>app.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\about\about-page.component.html">
+      <DependentUpon>about-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\about\about-page.component.scss">
+      <DependentUpon>about-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\contact\contact-page.component.html">
+      <DependentUpon>contact-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\contact\contact-page.component.scss">
+      <DependentUpon>contact-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\gallery\gallery-page.component.html">
+      <DependentUpon>gallery-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\gallery\gallery-page.component.scss">
+      <DependentUpon>gallery-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\home\home-page.component.html">
+      <DependentUpon>home-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\home\home-page.component.scss">
+      <DependentUpon>home-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\services\services-page.component.html">
+      <DependentUpon>services-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\services\services-page.component.scss">
+      <DependentUpon>services-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\whats-new\whats-new-page.component.html">
+      <DependentUpon>whats-new-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\whats-new\whats-new-page.component.scss">
+      <DependentUpon>whats-new-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="webpack.config.js" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="typedoc.json" />
     <Content Include="typings.json" />
+    <Content Include="src\assets\index.scss" />
+    <Content Include="src\assets\_breakpoints.scss" />
+    <Content Include="src\assets\_normalize.scss" />
+    <Content Include="src\assets\_varibles.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -220,7 +271,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\app\" />
+    <Folder Include="src\app\components\digital-asset\" />
+    <Folder Include="src\app\components\photo-gallery\" />
+    <Folder Include="src\app\components\professional-service\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -261,4 +314,35 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\actions\index.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\components\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\index.ts" />
+    <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\models\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\about\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\contact\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\gallery\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\home\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\services\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\whats-new\index.ts" />
+    <TypeScriptCompile Include="src\app\pipes\index.ts" />
+    <TypeScriptCompile Include="src\app\routing\index.ts" />
+    <TypeScriptCompile Include="src\app\services\index.ts" />
+    <TypeScriptCompile Include="src\app\store\index.ts" />
+    <TypeScriptCompile Include="src\app\utilities\index.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\vendor.ts" />
+    <TypeScriptCompile Include="src\app\pages\home\home-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\gallery\gallery-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\whats-new\whats-new-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\services\services-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\about\about-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\contact\contact-page.component.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
