@@ -2,7 +2,7 @@
 import { Store } from "@ngrx/store";
 import { AuthenticationService } from "../services";
 import { AppState, AppStore } from "../store";
-import { USER_LOGGED_IN, GET_CURRENT_USER_SUCCESS } from "../constants";
+import { USER_LOGGED_IN, USER_LOGGED_OUT, GET_CURRENT_USER_SUCCESS } from "../constants";
 import { DigitalAsset } from "../models";
 import { Observable } from "rxjs";
 import { guid } from "../utilities";
@@ -21,6 +21,13 @@ export class AuthenticationActions {
                 }, newGuid);
             });
         return newGuid;
+    }
+
+    public logOut() {        
+        this._store.dispatch({
+            type: USER_LOGGED_OUT,
+            payload: null
+        });
     }
 
     public getCurrentUser() {

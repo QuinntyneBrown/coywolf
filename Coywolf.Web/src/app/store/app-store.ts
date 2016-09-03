@@ -42,6 +42,13 @@ export class AppStore {
         return state;
     }
 
+    public get token$(): Observable<string> {
+        return this._store.select("token")
+            .map((data: { token: string }) => {
+                return data.token;
+            });
+    }
+
     public digitalAssets$(): Observable<Array<PhotoGallery>> {
         return this._store.select("digitalAssets")
             .map((data: { digitalAssets: Array<PhotoGallery> }) => {
