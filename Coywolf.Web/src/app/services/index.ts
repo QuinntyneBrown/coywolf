@@ -2,3 +2,4 @@
 export * from "./photo-gallery.service";
 export * from "./professional-service.service";
 export * from "./services.module";
+export * from "./authentication.service";

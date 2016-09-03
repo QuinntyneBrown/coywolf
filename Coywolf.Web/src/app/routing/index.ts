@@ -1,1 +1,2 @@
-﻿export * from "./routing.module";
+﻿export * from "./providers";
+export * from "./routing.module";

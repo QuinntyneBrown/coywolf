@@ -10,9 +10,15 @@ import { AppComponent } from './app.component';
 
 import { ActionsModule } from "./actions";
 import { ComponentsModule } from "./components";
-import { RoutingModule, routedComponents } from "./routing";
 import { ServicesModule } from "./services";
 import { StoreModule } from "./store";
+
+import {
+    RoutingModule,
+    routedComponents,
+    AuthenticationGuard,
+    ViewModelResolver
+} from "./routing";
 
 const declarables = [
     AppComponent,
@@ -31,6 +37,10 @@ const declarables = [
         HttpModule,
         CommonModule,
         RouterModule        
+    ],
+    providers: [
+        AuthenticationGuard,
+        ViewModelResolver
     ],
     declarations: [declarables],
     exports: [declarables],

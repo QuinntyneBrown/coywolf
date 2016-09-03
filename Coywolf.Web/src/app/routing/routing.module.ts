@@ -1,6 +1,12 @@
 ﻿import { Routes, RouterModule } from '@angular/router';
 
 import {
+    AuthenticationGuard,
+    ViewModelResolver
+} from "./providers";
+
+
+import {
 
     // public 
 
@@ -22,7 +28,8 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        component: HomePageComponent
+        component: HomePageComponent,
+        resolve: [ViewModelResolver]
     }
 ];
 

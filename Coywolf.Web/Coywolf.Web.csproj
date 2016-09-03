@@ -355,6 +355,7 @@
   -->
   <ItemGroup>
     <TypeScriptCompile Include="src\app\actions\actions.module.ts" />
+    <TypeScriptCompile Include="src\app\actions\authentication.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
@@ -397,10 +398,14 @@
     <TypeScriptCompile Include="src\app\pages\whats-new\index.ts" />
     <TypeScriptCompile Include="src\app\pipes\index.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
+    <TypeScriptCompile Include="src\app\routing\providers\authentication.guard.ts" />
+    <TypeScriptCompile Include="src\app\routing\providers\index.ts" />
+    <TypeScriptCompile Include="src\app\routing\providers\view-model.resolver.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="src\app\services\digital-asset.service.ts" />
     <TypeScriptCompile Include="src\app\services\index.ts" />
+    <TypeScriptCompile Include="src\app\services\authentication.service.ts" />
     <TypeScriptCompile Include="src\app\services\photo-gallery.service.ts" />
     <TypeScriptCompile Include="src\app\services\professional-service.service.ts" />
     <TypeScriptCompile Include="src\app\services\services.module.ts" />
