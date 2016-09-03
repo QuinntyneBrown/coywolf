@@ -6,8 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion></ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{658DA84D-AD6C-414A-9333-B89232911187}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -22,8 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -295,7 +293,6 @@
     <Folder Include="src\app\components\photo-gallery\" />
     <Folder Include="src\app\components\professional-service\" />
     <Folder Include="src\app\constants\digital-asset\" />
-    <Folder Include="src\app\constants\photo-gallery\" />
     <Folder Include="src\app\constants\professional-service\" />
   </ItemGroup>
   <PropertyGroup>
@@ -316,8 +313,7 @@
           <IISUrl>http://localhost:56622/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
@@ -354,6 +350,7 @@
     <TypeScriptCompile Include="src\app\constants\authentication\user-logged-in.ts" />
     <TypeScriptCompile Include="src\app\constants\authentication\user-logged-out.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\photo-gallery\index.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\models\digital-asset.model.ts" />
@@ -393,6 +390,7 @@
     <TypeScriptCompile Include="src\app\store\reducers\authentication\token.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\digital-asset\index.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\photo-gallery\index.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\photo-gallery\photo-gallery.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\professional-service\index.ts" />
     <TypeScriptCompile Include="src\app\store\store.module.ts" />
     <TypeScriptCompile Include="src\app\utilities\add-or-update.ts" />
@@ -417,6 +415,17 @@
     <TypeScriptCompile Include="src\app\pages\contact\contact-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\not-found\not-found-page.component.ts" />
     <TypeScriptCompile Include="src\app\components\nav\nav.component.ts" />
+    <TypeScriptCompile Include="src\app\constants\photo-gallery\add-photo-gallery-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\photo-gallery\get-photo-gallery-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\photo-gallery\remove-photo-gallery-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\professional-service\add-professional-service-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\professional-service\get-professional-service-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\professional-service\remove-professional-service-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\professional-service\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\digital-asset\add-digital-asset-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\digital-asset\get-digital-asset-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\digital-asset\remove-digital-asset-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\digital-asset\index.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
