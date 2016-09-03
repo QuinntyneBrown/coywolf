@@ -294,7 +294,6 @@
     <Folder Include="src\app\components\digital-asset\" />
     <Folder Include="src\app\components\photo-gallery\" />
     <Folder Include="src\app\components\professional-service\" />
-    <Folder Include="src\app\constants\authentication\" />
     <Folder Include="src\app\constants\digital-asset\" />
     <Folder Include="src\app\constants\photo-gallery\" />
     <Folder Include="src\app\constants\professional-service\" />
@@ -350,6 +349,10 @@
     <TypeScriptCompile Include="src\app\components\nav\index.ts" />
     <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
     <TypeScriptCompile Include="src\app\configuration\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\authentication\get-current-user-success.ts" />
+    <TypeScriptCompile Include="src\app\constants\authentication\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\authentication\user-logged-in.ts" />
+    <TypeScriptCompile Include="src\app\constants\authentication\user-logged-out.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
