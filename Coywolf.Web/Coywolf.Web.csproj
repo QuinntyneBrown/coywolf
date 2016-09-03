@@ -197,6 +197,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="lib\jquery.min.js" />
+    <Content Include="lib\slick.min.js" />
+    <Content Include="lib\tinymce.min.js" />
     <Content Include="packages.config" />
     <Content Include="src\app\app.component.html">
       <DependentUpon>app.component.ts</DependentUpon>
@@ -234,7 +237,12 @@
     <Content Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.scss">
       <DependentUpon>edit-professional-service-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.html" />
+    <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.html">
+      <DependentUpon>professional-service-list-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.scss">
+      <DependentUpon>professional-service-list-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\pages\contact\contact-page.component.html">
       <DependentUpon>contact-page.component.ts</DependentUpon>
     </Content>
@@ -280,7 +288,6 @@
     <Content Include="src\assets\_breakpoints.scss" />
     <Content Include="src\assets\_normalize.scss" />
     <Content Include="src\assets\_varibles.scss" />
-    <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -371,6 +378,7 @@
     <TypeScriptCompile Include="src\app\pages\about\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\digitial-asset\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\login\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\login\login-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.ts" />
@@ -388,6 +396,7 @@
     <TypeScriptCompile Include="src\app\pipes\index.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
+    <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="src\app\services\digital-asset.service.ts" />
     <TypeScriptCompile Include="src\app\services\index.ts" />
     <TypeScriptCompile Include="src\app\services\photo-gallery.service.ts" />

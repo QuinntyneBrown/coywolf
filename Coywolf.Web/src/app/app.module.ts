@@ -21,6 +21,12 @@ const declarables = [
 
 @NgModule({
     imports: [
+        ActionsModule,
+        ComponentsModule,
+        RoutingModule,
+        ServicesModule,
+        StoreModule,
+
         BrowserModule,
         HttpModule,
         CommonModule,
