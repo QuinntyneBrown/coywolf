@@ -21,6 +21,8 @@ namespace Coywolf
             container.RegisterType<IEncryptionService, EncryptionService>();
             container.RegisterType<ILogger, Logger>();
             container.RegisterType<IProfessionalServiceService, ProfessionalServiceService>();
+            container.RegisterType<IDigitalAssetService, DigitalAssetService>();
+            container.RegisterType<IPhotoGalleryService, PhotoGalleryService>();
             container.RegisterInstance(AuthConfiguration.LazyConfig);            
             return container;
         }

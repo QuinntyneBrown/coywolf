@@ -247,6 +247,8 @@
     <Compile Include="Dtos\UserDto.cs" />
     <Compile Include="Dtos\UserAddOrUpdateRequestDto.cs" />
     <Compile Include="Dtos\UserAddOrUpdateResponseDto.cs" />
+    <Compile Include="Controllers\PhotoGalleryController.cs" />
+    <Compile Include="Controllers\DigitalAssetController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

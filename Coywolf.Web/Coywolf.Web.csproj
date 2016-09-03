@@ -370,6 +370,8 @@
     <TypeScriptCompile Include="src\app\constants\index.ts" />
     <TypeScriptCompile Include="src\app\constants\photo-gallery\index.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
+    <TypeScriptCompile Include="src\app\helpers\index.ts" />
+    <TypeScriptCompile Include="src\app\helpers\oauth.helper.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\models\digital-asset.model.ts" />
     <TypeScriptCompile Include="src\app\models\index.ts" />
