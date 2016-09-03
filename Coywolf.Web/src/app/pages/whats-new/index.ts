@@ -1,1 +1,1 @@
-﻿
+﻿export * from "./whats-new-page.component";

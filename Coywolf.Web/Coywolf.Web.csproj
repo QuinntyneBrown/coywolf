@@ -210,6 +210,13 @@
     <Content Include="src\app\pages\about\about-page.component.scss">
       <DependentUpon>about-page.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.html">
+      <DependentUpon>edit-professional-service-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.scss">
+      <DependentUpon>edit-professional-service-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.html" />
     <Content Include="src\app\pages\contact\contact-page.component.html">
       <DependentUpon>contact-page.component.ts</DependentUpon>
     </Content>
@@ -249,6 +256,7 @@
     <Content Include="src\assets\_breakpoints.scss" />
     <Content Include="src\assets\_normalize.scss" />
     <Content Include="src\assets\_varibles.scss" />
+    <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -274,6 +282,10 @@
     <Folder Include="src\app\components\digital-asset\" />
     <Folder Include="src\app\components\photo-gallery\" />
     <Folder Include="src\app\components\professional-service\" />
+    <Folder Include="src\app\constants\authentication\" />
+    <Folder Include="src\app\constants\digital-asset\" />
+    <Folder Include="src\app\constants\photo-gallery\" />
+    <Folder Include="src\app\constants\professional-service\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -315,14 +327,30 @@
   </Target>
   -->
   <ItemGroup>
+    <TypeScriptCompile Include="src\app\actions\digital-asset.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
+    <TypeScriptCompile Include="src\app\actions\photo-gallery.actions.ts" />
+    <TypeScriptCompile Include="src\app\actions\professional-service.actions.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
+    <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
+    <TypeScriptCompile Include="src\app\configuration\index.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\models\digital-asset.model.ts" />
     <TypeScriptCompile Include="src\app\models\index.ts" />
+    <TypeScriptCompile Include="src\app\models\photo-gallery.model.ts" />
+    <TypeScriptCompile Include="src\app\models\professional-service.model.ts" />
     <TypeScriptCompile Include="src\app\pages\about\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digitial-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\professional-service\edit-professional-service\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\professional-service\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\professional-service\professional-service-list\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\contact\index.ts" />
     <TypeScriptCompile Include="src\app\pages\gallery\index.ts" />
     <TypeScriptCompile Include="src\app\pages\home\index.ts" />
@@ -331,9 +359,34 @@
     <TypeScriptCompile Include="src\app\pages\whats-new\index.ts" />
     <TypeScriptCompile Include="src\app\pipes\index.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
+    <TypeScriptCompile Include="src\app\routing\routing,module.ts" />
+    <TypeScriptCompile Include="src\app\services\digital-asset.service.ts" />
     <TypeScriptCompile Include="src\app\services\index.ts" />
+    <TypeScriptCompile Include="src\app\services\photo-gallery.service.ts" />
+    <TypeScriptCompile Include="src\app\services\professional-service.service.ts" />
+    <TypeScriptCompile Include="src\app\services\services.module.ts" />
+    <TypeScriptCompile Include="src\app\store\app-state.ts" />
+    <TypeScriptCompile Include="src\app\store\app-store.ts" />
     <TypeScriptCompile Include="src\app\store\index.ts" />
+    <TypeScriptCompile Include="src\app\store\initial-state.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\authentication\current-user.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\authentication\index.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\authentication\token.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\digital-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\photo-gallery\index.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\professional-service\index.ts" />
+    <TypeScriptCompile Include="src\app\store\store.module.ts" />
+    <TypeScriptCompile Include="src\app\utilities\add-or-update.ts" />
+    <TypeScriptCompile Include="src\app\utilities\append-to-body-async.ts" />
+    <TypeScriptCompile Include="src\app\utilities\create-element.ts" />
+    <TypeScriptCompile Include="src\app\utilities\extend-css-async.ts" />
+    <TypeScriptCompile Include="src\app\utilities\extract-data-from-http-response.ts" />
+    <TypeScriptCompile Include="src\app\utilities\guid.ts" />
     <TypeScriptCompile Include="src\app\utilities\index.ts" />
+    <TypeScriptCompile Include="src\app\utilities\pluck-out.ts" />
+    <TypeScriptCompile Include="src\app\utilities\pluck.ts" />
+    <TypeScriptCompile Include="src\app\utilities\remove-element.ts" />
+    <TypeScriptCompile Include="src\app\utilities\set-opacity-async.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
