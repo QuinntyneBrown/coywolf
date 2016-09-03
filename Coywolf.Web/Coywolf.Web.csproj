@@ -292,8 +292,6 @@
     <Folder Include="src\app\components\digital-asset\" />
     <Folder Include="src\app\components\photo-gallery\" />
     <Folder Include="src\app\components\professional-service\" />
-    <Folder Include="src\app\constants\digital-asset\" />
-    <Folder Include="src\app\constants\professional-service\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -334,10 +332,7 @@
   </Target>
   -->
   <ItemGroup>
-    <TypeScriptCompile Include="src\app\actions\digital-asset.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
-    <TypeScriptCompile Include="src\app\actions\photo-gallery.actions.ts" />
-    <TypeScriptCompile Include="src\app\actions\professional-service.actions.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
@@ -426,6 +421,9 @@
     <TypeScriptCompile Include="src\app\constants\digital-asset\get-digital-asset-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\digital-asset\remove-digital-asset-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\digital-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\actions\digital-asset.actions.ts" />
+    <TypeScriptCompile Include="src\app\actions\professional-service.actions.ts" />
+    <TypeScriptCompile Include="src\app\actions\photo-gallery.actions.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
