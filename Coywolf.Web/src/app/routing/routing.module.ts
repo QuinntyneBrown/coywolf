@@ -18,7 +18,11 @@ import {
     ProfessionalServiceListPageComponent,
 
     UploadDigitalAssetPageComponent,
-    DigitalAssetListPageComponent
+    DigitalAssetListPageComponent,
+
+    EditPhotoGalleryPageComponent,
+    PhotoGalleryListPageComponent
+    
 } from "../pages";
 
 export const routes: Routes = [
@@ -32,7 +36,23 @@ export const routes: Routes = [
         component: HomePageComponent
     },
     {
+        path: 'gallery',
+        component: AboutPageComponent
+    },
+    {
+        path: 'whats-new',
+        component: AboutPageComponent
+    },
+    {
         path: 'about',
+        component: AboutPageComponent
+    },
+    {
+        path: 'services',
+        component: AboutPageComponent
+    },
+    {
+        path: 'contact',
         component: AboutPageComponent
     }
 ];
@@ -40,12 +60,50 @@ export const routes: Routes = [
 export const adminRoutes: Routes = [
     {
         path: 'admin',
+        pathMatch:'prefix',
         component: AdminComponent,
-        canActivate:[AuthenticationGuard]
-    }
+        canActivate: [AuthenticationGuard],
+        children: [
+            {
+                path: '',
+                component: ProfessionalServiceListPageComponent
+            },
+            {
+                path: 'service/create',
+                component: EditProfessionalServicePageComponent
+            },
+            {
+                path: 'service/edit/:id',
+                component: EditProfessionalServicePageComponent
+            },
+            {
+                path: 'digitalassets',
+                component: DigitalAssetListPageComponent
+            },
+            {
+                path: 'digitalasset/upload',
+                component: UploadDigitalAssetPageComponent
+            },
+            {
+                path: 'photogalleries',
+                component: PhotoGalleryListPageComponent
+            },
+            {
+                path: 'photogallery/create',
+                component: EditPhotoGalleryPageComponent
+            },
+            {
+                path: 'photogallery/edit/:id',
+                component: EditPhotoGalleryPageComponent
+            }
+        ]
+    },
 ];
 
-export const RoutingModule = RouterModule.forRoot([...routes]);
+export const RoutingModule = RouterModule.forRoot([
+    ...routes,
+    ...adminRoutes
+]);
 
 export const routedComponents = [
     AboutPageComponent,
@@ -57,6 +115,9 @@ export const routedComponents = [
     ProfessionalServiceListPageComponent,
 
     UploadDigitalAssetPageComponent,
-    DigitalAssetListPageComponent
+    DigitalAssetListPageComponent,
+
+    PhotoGalleryListPageComponent,
+    EditPhotoGalleryPageComponent
 ];
 

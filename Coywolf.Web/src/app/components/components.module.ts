@@ -5,8 +5,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { NavComponent } from './nav';
 
+import { SideNavComponent } from './admin';
+
 const declarables = [
-    NavComponent
+    NavComponent,
+    SideNavComponent
 ];
 
 export const providers = [];

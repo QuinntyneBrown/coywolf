@@ -210,6 +210,12 @@
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\admin\side-nav\side-nav.component.html">
+      <DependentUpon>side-nav.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\side-nav\side-nav.component.scss">
+      <DependentUpon>side-nav.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\components\nav\nav.component.html">
       <DependentUpon>nav.component.ts</DependentUpon>
     </Content>
@@ -245,6 +251,18 @@
     </Content>
     <Content Include="src\app\pages\admin\login\login-page.component.scss">
       <DependentUpon>login-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\edit-photo-gallery-page.component.html">
+      <DependentUpon>edit-photo-gallery-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\edit-photo-gallery-page.component.scss">
+      <DependentUpon>edit-photo-gallery-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\photo-gallery\photo-gallery-list\photo-gallery-list-page.component.html">
+      <DependentUpon>photo-gallery-list-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\photo-gallery\photo-gallery-list\photo-gallery-list-page.component.scss">
+      <DependentUpon>photo-gallery-list-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.html">
       <DependentUpon>edit-professional-service-page.component.ts</DependentUpon>
@@ -330,8 +348,6 @@
     <Folder Include="src\app\components\digital-asset\" />
     <Folder Include="src\app\components\photo-gallery\" />
     <Folder Include="src\app\components\professional-service\" />
-    <Folder Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\" />
-    <Folder Include="src\app\pages\admin\photo-gallery\photo-gallery-list\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -378,6 +394,8 @@
     <TypeScriptCompile Include="src\app\actions\index.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\index.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\side-nav\index.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
     <TypeScriptCompile Include="src\app\components\nav\index.ts" />
@@ -406,7 +424,11 @@
     <TypeScriptCompile Include="src\app\pages\admin\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\login\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\login\login-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\edit-photo-gallery-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\photo-gallery-list\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\photo-gallery-list\photo-gallery-list-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\professional-service\edit-professional-service\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\professional-service\index.ts" />
@@ -484,6 +506,7 @@
     <TypeScriptCompile Include="src\app\actions\professional-service.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\photo-gallery.actions.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\admin.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\side-nav\side-nav.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

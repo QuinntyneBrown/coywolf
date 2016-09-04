@@ -16,7 +16,8 @@ import { StoreModule } from "./store";
 import {
     RoutingModule,
     routedComponents,
-    AuthenticationGuard
+    AuthenticationGuard,
+    LoginRedirectService
 } from "./routing";
 
 const declarables = [
@@ -38,7 +39,8 @@ const declarables = [
         RouterModule        
     ],
     providers: [
-        AuthenticationGuard
+        AuthenticationGuard,
+        LoginRedirectService
     ],
     declarations: [declarables],
     exports: [declarables],
