@@ -329,6 +329,8 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="src\app\components\wysiwyg\wysiwyg.component.scss" />
+    <Content Include="src\app\components\wysiwyg\wysiwyg.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -507,6 +509,7 @@
     <TypeScriptCompile Include="src\app\actions\photo-gallery.actions.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\admin.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\side-nav\side-nav.component.ts" />
+    <TypeScriptCompile Include="src\app\components\wysiwyg\wysiwyg.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
