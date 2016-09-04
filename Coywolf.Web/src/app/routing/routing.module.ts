@@ -1,21 +1,18 @@
 ﻿import { Routes, RouterModule } from '@angular/router';
 
 import {
-    AuthenticationGuard,
-    ViewModelResolver
+    AuthenticationGuard
 } from "./providers";
 
 
 import {
-
     // public 
-
     AboutPageComponent,
     HomePageComponent,
     NotFoundPageComponent,
 
     // Admin
-
+    AdminComponent,
     EditProfessionalServicePageComponent,
     ProfessionalServiceListPageComponent
 } from "../pages";
@@ -28,8 +25,15 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        component: HomePageComponent,
-        resolve: [ViewModelResolver]
+        component: HomePageComponent
+    }
+];
+
+export const adminRoutes: Routes = [
+    {
+        path: 'admin',
+        component: AdminComponent,
+        canActivate:[AuthenticationGuard]
     }
 ];
 
@@ -39,6 +43,7 @@ export const routedComponents = [
     AboutPageComponent,
     HomePageComponent,
 
+    AdminComponent,
     EditProfessionalServicePageComponent,
     ProfessionalServiceListPageComponent
 ];

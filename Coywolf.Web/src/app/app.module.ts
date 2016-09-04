@@ -16,8 +16,7 @@ import { StoreModule } from "./store";
 import {
     RoutingModule,
     routedComponents,
-    AuthenticationGuard,
-    ViewModelResolver
+    AuthenticationGuard
 } from "./routing";
 
 const declarables = [
@@ -39,8 +38,7 @@ const declarables = [
         RouterModule        
     ],
     providers: [
-        AuthenticationGuard,
-        ViewModelResolver
+        AuthenticationGuard
     ],
     declarations: [declarables],
     exports: [declarables],

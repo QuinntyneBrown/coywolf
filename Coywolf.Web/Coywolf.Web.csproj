@@ -401,7 +401,6 @@
     <TypeScriptCompile Include="src\app\routing\providers\authentication.guard.ts" />
     <TypeScriptCompile Include="src\app\routing\providers\index.ts" />
     <TypeScriptCompile Include="src\app\routing\providers\login-redirect.service.ts" />
-    <TypeScriptCompile Include="src\app\routing\providers\view-model.resolver.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="src\app\services\digital-asset.service.ts" />
