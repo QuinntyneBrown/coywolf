@@ -56,6 +56,20 @@ namespace Coywolf.Controllers
         [ResponseType(typeof(int))]
         public IHttpActionResult Remove(int id) { return Ok(_digitalAssetService.Remove(id)); }
 
+        [Route("serve")]
+        [HttpGet]
+        [AllowAnonymous]
+        [CacheOutput(ClientTimeSpan = 1000, ServerTimeSpan = 1000)]
+        public HttpResponseMessage Serve([FromUri]Guid uniqueId, int? height = null)
+        {
+            DigitalAsset digitalAsset = _cache.FromCacheOrService(() => _repository.GetAll().FirstOrDefault(x => x.UniqueId == uniqueId), uniqueId.ToString());
+            HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);
+            if (digitalAsset == null)
+                return result;
+            result.Content = new ByteArrayContent(digitalAsset.Bytes);
+            result.Content.Headers.ContentType = new MediaTypeHeaderValue(digitalAsset.ContentType);
+            return result;
+        }
 
         [AllowAnonymous]
         [Route("upload")]
@@ -79,12 +93,12 @@ namespace Coywolf.Controllers
                         .Replace("&", "and")).Name;
                     Stream stream = await file.ReadAsStreamAsync();
                     var bytes = StreamHelper.ReadToEnd(stream);
-                    var photo = new DigitalAsset();
-                    photo.FileName = filename;
-                    photo.Bytes = bytes;
-                    photo.ContentType = System.Convert.ToString(file.Headers.ContentType);
-                    _repository.Add(photo);
-                    digitalAssets.Add(photo);
+                    var digitalAsset = new DigitalAsset();
+                    digitalAsset.FileName = filename;
+                    digitalAsset.Bytes = bytes;
+                    digitalAsset.ContentType = System.Convert.ToString(file.Headers.ContentType);
+                    _repository.Add(digitalAsset);
+                    digitalAssets.Add(digitalAsset);
                 }
 
                 _uow.SaveChanges();

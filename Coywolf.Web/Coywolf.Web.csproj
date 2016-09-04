@@ -197,6 +197,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dist\app.js" />
+    <Content Include="dist\polyfills.js" />
+    <Content Include="dist\vendor.js" />
     <Content Include="lib\jquery.min.js" />
     <Content Include="lib\slick.min.js" />
     <Content Include="lib\tinymce.min.js" />
@@ -224,6 +227,18 @@
     </Content>
     <Content Include="src\app\pages\admin\admin.component.scss">
       <DependentUpon>admin.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\digital-asset\digital-asset-list\digital-asset-list-page.component.html">
+      <DependentUpon>digital-asset-list-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\digital-asset\digital-asset-list\digital-asset-list-page.component.scss">
+      <DependentUpon>digital-asset-list-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\digital-asset\upload-digital-asset\upload-digital-asset-page.component.html">
+      <DependentUpon>upload-digital-asset-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\digital-asset\upload-digital-asset\upload-digital-asset-page.component.scss">
+      <DependentUpon>upload-digital-asset-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\pages\admin\login\login-page.component.html">
       <DependentUpon>login-page.component.ts</DependentUpon>
@@ -288,6 +303,8 @@
     <Content Include="src\assets\_breakpoints.scss" />
     <Content Include="src\assets\_normalize.scss" />
     <Content Include="src\assets\_varibles.scss" />
+    <None Include="Properties\PublishProfiles\coywolf - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\coywolf - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -313,6 +330,8 @@
     <Folder Include="src\app\components\digital-asset\" />
     <Folder Include="src\app\components\photo-gallery\" />
     <Folder Include="src\app\components\professional-service\" />
+    <Folder Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\" />
+    <Folder Include="src\app\pages\admin\photo-gallery\photo-gallery-list\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -379,7 +398,11 @@
     <TypeScriptCompile Include="src\app\models\photo-gallery.model.ts" />
     <TypeScriptCompile Include="src\app\models\professional-service.model.ts" />
     <TypeScriptCompile Include="src\app\pages\about\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\digitial-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\digital-asset-list\digital-asset-list-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\digital-asset-list\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\upload-digital-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\upload-digital-asset\upload-digital-asset-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\login\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\login\login-page.component.ts" />

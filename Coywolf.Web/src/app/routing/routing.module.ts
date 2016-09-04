@@ -13,8 +13,12 @@ import {
 
     // Admin
     AdminComponent,
+
     EditProfessionalServicePageComponent,
-    ProfessionalServiceListPageComponent
+    ProfessionalServiceListPageComponent,
+
+    UploadDigitalAssetPageComponent,
+    DigitalAssetListPageComponent
 } from "../pages";
 
 export const routes: Routes = [
@@ -26,6 +30,10 @@ export const routes: Routes = [
     {
         path: 'home',
         component: HomePageComponent
+    },
+    {
+        path: 'about',
+        component: AboutPageComponent
     }
 ];
 
@@ -44,7 +52,11 @@ export const routedComponents = [
     HomePageComponent,
 
     AdminComponent,
+
     EditProfessionalServicePageComponent,
-    ProfessionalServiceListPageComponent
+    ProfessionalServiceListPageComponent,
+
+    UploadDigitalAssetPageComponent,
+    DigitalAssetListPageComponent
 ];
 
