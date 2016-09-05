@@ -66,6 +66,10 @@ export const adminRoutes: Routes = [
         children: [
             {
                 path: '',
+                component: EditProfessionalServicePageComponent
+            },
+            {
+                path: 'services',
                 component: ProfessionalServiceListPageComponent
             },
             {

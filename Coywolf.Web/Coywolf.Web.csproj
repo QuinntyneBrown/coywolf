@@ -222,6 +222,7 @@
     <Content Include="src\app\components\nav\nav.component.scss">
       <DependentUpon>nav.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\professional-service\professional-service-editor\professional-service-editor.component.html" />
     <Content Include="src\app\components\wysiwyg\wysiwyg.component.html">
       <DependentUpon>wysiwyg.component.ts</DependentUpon>
     </Content>
@@ -329,6 +330,7 @@
     <Content Include="src\assets\_varibles.scss" />
     <None Include="Properties\PublishProfiles\coywolf - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\coywolf - Web Deploy.pubxml" />
+    <Content Include="src\app\components\professional-service\professional-service-editor\professional-service-editor.component.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -353,7 +355,6 @@
   <ItemGroup>
     <Folder Include="src\app\components\digital-asset\" />
     <Folder Include="src\app\components\photo-gallery\" />
-    <Folder Include="src\app\components\professional-service\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -400,11 +401,15 @@
     <TypeScriptCompile Include="src\app\actions\index.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\pages\models.d.ts" />
     <TypeScriptCompile Include="src\app\components\admin\index.ts" />
     <TypeScriptCompile Include="src\app\components\admin\side-nav\index.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
     <TypeScriptCompile Include="src\app\components\nav\index.ts" />
+    <TypeScriptCompile Include="src\app\components\professional-service\index.ts" />
+    <TypeScriptCompile Include="src\app\components\professional-service\professional-service-editor\index.ts" />
+    <TypeScriptCompile Include="src\app\components\professional-service\professional-service-editor\professional-service-editor.component.ts" />
     <TypeScriptCompile Include="src\app\components\wysiwyg\index.ts" />
     <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
     <TypeScriptCompile Include="src\app\configuration\index.ts" />

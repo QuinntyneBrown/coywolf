@@ -4,7 +4,7 @@ import { AppState } from "./app-state";
 import { guid, pluck } from "../utilities";
 import { select, SelectSignature } from '@ngrx/core/operator/select';
 import { Observable, BehaviorSubject } from "rxjs";
-import { PhotoGallery, ProfessionalService } from "../models";
+import { PhotoGallery, ProfessionalService, DigitalAsset } from "../models";
 
 
 @Injectable()
@@ -56,6 +56,14 @@ export class AppStore {
             });
     }
 
+    public digitalAssetById$(id: string): Observable<DigitalAsset> {
+        return this._store.select("digitalAssets")
+            .map((data: { digitalAssets: Array<DigitalAsset> }) => {
+                return pluck({ value: id, items: data.digitalAssets }) as DigitalAsset;
+            })
+    }
+    
+
     public professionalServices$(): Observable<Array<ProfessionalService>> {
         return this._store.select("professionalServices")
             .map((data: { professionalServices: Array<ProfessionalService> }) => {
@@ -63,11 +71,25 @@ export class AppStore {
             });
     }
 
+    public professionalServiceById$(id: string): Observable<ProfessionalService> {
+        return this._store.select("professionalServices")
+            .map((data: { professionalServices: Array<ProfessionalService> }) => {
+                return pluck({ value: id, items: data.professionalServices }) as ProfessionalService;
+            })
+    }
+
     public photoGalleries$(): Observable<Array<PhotoGallery>> {
         return this._store.select("photoGalleries")
             .map((data: { photoGalleries: Array<PhotoGallery> }) => {
                 return data.photoGalleries;
             });
+    }
+
+    public photoGalleryById$(id: string): Observable<PhotoGallery> {
+        return this._store.select("photoGalleries")
+            .map((data: { photoGalleries: Array<PhotoGallery> }) => {
+                return pluck({ value: id, items: data.photoGalleries }) as PhotoGallery;
+            })
     }
 }
 

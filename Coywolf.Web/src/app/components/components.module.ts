@@ -6,11 +6,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavComponent } from './nav';
 import { SideNavComponent } from './admin';
 import { WysiwygComponent } from "./wysiwyg";
+import { ProfessionalServiceEditorComponent } from "./professional-service";
 
 const declarables = [
     NavComponent,
     SideNavComponent,
-    WysiwygComponent
+    WysiwygComponent,
+
+    ProfessionalServiceEditorComponent
 ];
 
 export const providers = [];

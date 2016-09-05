@@ -1,0 +1,14 @@
+<div class="professional-service-editor">
+
+    <h1>Edit Professional Service</h1>
+
+    <form novalidate [formGroup]="form">
+        <div>
+            <input formControlName="name" />
+        </div>        
+    </form>
+    
+    <wysiwyg [(ngModel)]="description"></wysiwyg>
+
+    <button type="submit" (click)="submit()" >Save</button>
+</div>

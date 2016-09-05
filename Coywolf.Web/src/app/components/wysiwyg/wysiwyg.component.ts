@@ -1,9 +1,12 @@
+
 import {
     Component,
     forwardRef,
     OnChanges,
     SimpleChanges,
+    OnInit,
     AfterViewInit,
+    ElementRef,
     NgZone
 } from '@angular/core';
 
@@ -13,6 +16,8 @@ import {
 } from '@angular/forms';
 
 const noop = () => { };
+
+import { guid } from "../../utilities";
 
 export const TINYMCE_INPUT_CONTROL_VALUE_ACCESSOR: any = {
     provide: NG_VALUE_ACCESSOR,
@@ -28,9 +33,14 @@ declare var tinymce;
     selector: "wysiwyg",
     providers: [TINYMCE_INPUT_CONTROL_VALUE_ACCESSOR] 
 })
-export class WysiwygComponent implements ControlValueAccessor, AfterViewInit  {
+export class WysiwygComponent implements ControlValueAccessor, AfterViewInit, OnInit  {
 
-    constructor(private _ngZone: NgZone) { }
+    constructor(private _ngZone: NgZone, private _elementRef: ElementRef) { }
+
+    ngOnInit() {
+        var el: HTMLElement = (<HTMLElement>this._elementRef.nativeElement).querySelector("textarea") as HTMLElement;
+        el.setAttribute("id", this._guid);
+    }
 
     private _value: string = '';
 
@@ -38,19 +48,26 @@ export class WysiwygComponent implements ControlValueAccessor, AfterViewInit  {
 
     private onChangeCallback: (_: any) => void = noop;
 
+    private _guid: string = guid();
+
+    private _editor: any;
+
+    private _hasInitialized: boolean = false;
+
     public ngAfterViewInit() {
-        var e:any
         tinymce.init({
-            selector: 'textarea',
+            selector: `textarea#${this._guid}`,
             setup: editor => {
-                e = editor;
+                this._editor = editor;
                 editor.on('keyup change', (ed, l) => {
                     this._ngZone.run(() => {
                         this.value = tinymce.activeEditor.getContent();
                     });                    
                 });  
-
-                setTimeout(() => { editor.setContent(this.value); }, 0);
+                setTimeout(() => {
+                    editor.setContent(this.value);
+                    this._hasInitialized = true;
+                }, 0);
             },
             height: 500,
             plugins: [
@@ -64,14 +81,14 @@ export class WysiwygComponent implements ControlValueAccessor, AfterViewInit  {
 
     get value(): string { return this._value; };
 
-    set value(value: string) {
+    set value(value: string) {        
         if (value !== this._value) {
             this._value = value;   
             this.onChangeCallback(this._value);         
         }
     }
 
-    writeValue(value: string) {
+    writeValue(value: string) {        
         if (value !== this._value) {
             this._value = value;
         }
