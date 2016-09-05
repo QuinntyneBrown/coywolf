@@ -12,6 +12,7 @@ namespace Coywolf.Migrations
 
         protected override void Seed(Coywolf.Data.DataContext context)
         {
+            DigitalAssetConfiguration.Seed(context);
             PhotoGalleryConfiguration.Seed(context);
             ProfessionalServiceConfiguration.Seed(context);
             UserConfiguration.Seed(context);

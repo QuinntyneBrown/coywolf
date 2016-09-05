@@ -60,9 +60,12 @@ namespace Coywolf.Controllers
         [HttpGet]
         [AllowAnonymous]
         [CacheOutput(ClientTimeSpan = 1000, ServerTimeSpan = 1000)]
-        public HttpResponseMessage Serve([FromUri]Guid uniqueId, int? height = null)
+        public HttpResponseMessage Serve([FromUri]Guid? uniqueId = null, int? height = null, string name = null)
         {
-            DigitalAsset digitalAsset = _cache.FromCacheOrService(() => _repository.GetAll().FirstOrDefault(x => x.UniqueId == uniqueId), uniqueId.ToString());
+            var digitalAsset = uniqueId.HasValue ?
+                _cache.FromCacheOrService(() => _repository.GetAll().FirstOrDefault(x => x.UniqueId == uniqueId), uniqueId.ToString())
+                : _cache.FromCacheOrService(() => _repository.GetAll().FirstOrDefault(x => x.Name == name), name);
+
             HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);
             if (digitalAsset == null)
                 return result;
