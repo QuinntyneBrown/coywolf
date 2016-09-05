@@ -23,6 +23,8 @@ export class ProfessionalServiceEditorComponent {
 
     @Output() onSubmit: EventEmitter<any> = new EventEmitter();
 
+    @Input() entity: any;
+
     public form = new FormGroup({
         name: new FormControl()
     });

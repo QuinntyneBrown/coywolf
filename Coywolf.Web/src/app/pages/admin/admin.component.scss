@@ -1,0 +1,20 @@
+side-nav {
+    float:left;
+    position:relative;
+    max-width:300px;
+}
+
+.admin-content {
+    float:left;
+    position:relative;
+    max-width:800px;
+}
+
+.admin:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}

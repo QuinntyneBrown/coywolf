@@ -1,5 +1,5 @@
 <div class="edit-professional-service-page">
-    <professional-service-editor (onSubmit)="onSubmit">
+    <professional-service-editor (onSubmit)="onSubmit($event)" [entity]="entity$ | async">
 
     </professional-service-editor>
 </div>

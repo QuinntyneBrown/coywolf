@@ -1,6 +1,8 @@
 <div class="professional-service-editor">
 
-    <h1>Edit Professional Service</h1>
+    <h1 *ngIf="entity?.id">Edit Professional Service</h1>
+
+    <h1 *ngIf="!entity?.id">Create Professional Service</h1>
 
     <form novalidate [formGroup]="form">
         <div>

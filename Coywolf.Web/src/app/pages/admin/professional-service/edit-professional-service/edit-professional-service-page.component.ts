@@ -31,12 +31,13 @@ export class EditProfessionalServicePageComponent implements OnInit {
         this._store.lastTriggeredActionId$
             .subscribe(id => {
                 if (this.addOrUpdateId && id == this.addOrUpdateId) {
-                    this._router.navigate(["/services"]);
+                    this._router.navigate(["/admin/services"]);
                 }
             });
     }
 
     public onSubmit(options: { value: ProfessionalService }) {
+        alert("?");
         this.addOrUpdateId = this._professionalServiceActions.add(options.value);
     }
 
