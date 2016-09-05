@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { RouterModule  } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import "./rxjs-extensions";
 
@@ -36,6 +37,7 @@ const declarables = [
         BrowserModule,
         HttpModule,
         CommonModule,
+        FormsModule,
         RouterModule        
     ],
     providers: [

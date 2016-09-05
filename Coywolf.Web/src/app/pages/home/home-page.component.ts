@@ -6,8 +6,6 @@ import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core
     selector: "home-page",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomePageComponent implements OnInit { 
-    ngOnInit() {
-
-    }
+export class HomePageComponent  { 
+    public dataModel: string = "?";
 }

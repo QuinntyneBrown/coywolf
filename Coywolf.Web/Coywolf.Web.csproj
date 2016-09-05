@@ -222,6 +222,12 @@
     <Content Include="src\app\components\nav\nav.component.scss">
       <DependentUpon>nav.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\wysiwyg\wysiwyg.component.html">
+      <DependentUpon>wysiwyg.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\wysiwyg\wysiwyg.component.scss">
+      <DependentUpon>wysiwyg.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\pages\about\about-page.component.html">
       <DependentUpon>about-page.component.ts</DependentUpon>
     </Content>
@@ -329,8 +335,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="src\app\components\wysiwyg\wysiwyg.component.scss" />
-    <Content Include="src\app\components\wysiwyg\wysiwyg.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -401,6 +405,7 @@
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
     <TypeScriptCompile Include="src\app\components\nav\index.ts" />
+    <TypeScriptCompile Include="src\app\components\wysiwyg\index.ts" />
     <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
     <TypeScriptCompile Include="src\app\configuration\index.ts" />
     <TypeScriptCompile Include="src\app\constants\authentication\get-current-user-success.ts" />
