@@ -1,16 +1,13 @@
 <div class="professional-service-editor">
 
-    <h1 *ngIf="entity?.id">Edit Professional Service</h1>
+    <h1 *ngIf="id">Edit Professional Service</h1>
 
-    <h1 *ngIf="!entity?.id">Create Professional Service</h1>
+    <h1 *ngIf="!id">Create Professional Service</h1>
 
-    <form novalidate [formGroup]="form">
-        <div>
-            <input formControlName="name" />
-        </div>        
-    </form>
+    <input formControlName="name" />
     
     <wysiwyg [(ngModel)]="description"></wysiwyg>
 
-    <button type="submit" (click)="submit()" >Save</button>
+    <button type="submit" (click)="submit()">Save</button>
+
 </div>

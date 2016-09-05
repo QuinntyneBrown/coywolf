@@ -14,27 +14,25 @@ import {
     AbstractControl
 } from "@angular/forms";
 
+
 @Component({
     template: require("./professional-service-editor.component.html"),
     styles: [require("./professional-service-editor.component.scss")],
     selector: "professional-service-editor",
 })
 export class ProfessionalServiceEditorComponent {
-
     @Output() onSubmit: EventEmitter<any> = new EventEmitter();
-
     @Input() entity: any;
-
-    public form = new FormGroup({
-        name: new FormControl()
-    });
-
+    public id = this.entity.id;
+    public name = new FormControl(this.entity.name);
+    public description: string = this.entity.description;
     public submit() {
         this.onSubmit.emit({
-            value: Object.assign({}, this.form.value, {
+            value: {
+                name: this.name,
                 description: this.description
-            })
+            }
         });
     }
-    public description: string;
+    
 }
