@@ -23,6 +23,7 @@ namespace Coywolf
             container.RegisterType<IProfessionalServiceService, ProfessionalServiceService>();
             container.RegisterType<IDigitalAssetService, DigitalAssetService>();
             container.RegisterType<IPhotoGalleryService, PhotoGalleryService>();
+            container.RegisterType<IViewModelService, ViewModelService>();
             container.RegisterInstance(AuthConfiguration.LazyConfig);            
             return container;
         }
