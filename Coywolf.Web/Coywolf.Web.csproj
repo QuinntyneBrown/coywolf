@@ -472,6 +472,7 @@
     <TypeScriptCompile Include="src\app\services\photo-gallery.service.ts" />
     <TypeScriptCompile Include="src\app\services\professional-service.service.ts" />
     <TypeScriptCompile Include="src\app\services\services.module.ts" />
+    <TypeScriptCompile Include="src\app\services\view-model.service.ts" />
     <TypeScriptCompile Include="src\app\store\app-state.ts" />
     <TypeScriptCompile Include="src\app\store\app-store.ts" />
     <TypeScriptCompile Include="src\app\store\index.ts" />
@@ -486,6 +487,8 @@
     <TypeScriptCompile Include="src\app\store\reducers\photo-gallery\photo-gallery.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\professional-service\index.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\professional-service\professional-service.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\view-model\index.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\view-model\view-model.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\store.module.ts" />
     <TypeScriptCompile Include="src\app\utilities\add-or-update.ts" />
     <TypeScriptCompile Include="src\app\utilities\append-to-body-async.ts" />
@@ -527,6 +530,10 @@
     <TypeScriptCompile Include="src\app\components\admin\side-nav\side-nav.component.ts" />
     <TypeScriptCompile Include="src\app\components\wysiwyg\wysiwyg.component.ts" />
     <TypeScriptCompile Include="src\app\components\photo-grid\photo-grid.component.ts" />
+    <TypeScriptCompile Include="src\app\actions\view-model.actions.ts" />
+    <TypeScriptCompile Include="src\app\constants\view-model\get-view-model-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\view-model\get-view-model-by-type-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\view-model\index.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
