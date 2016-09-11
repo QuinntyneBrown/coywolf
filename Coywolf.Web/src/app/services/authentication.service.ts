@@ -13,7 +13,7 @@ export class AuthenticationService {
     public tryToLogin(options: { username: string, password: string }) {
         Object.assign(options, { grant_type: "password" });
         let headers = new Headers();
-        headers.set("Content-Type", "application/x-www-form-urlencoded");        
+        headers.append("Content-Type", "application/x-www-form-urlencoded");        
         return this._http
             .post(`${apiCofiguration.baseUrl}/api/user/token`, formEncode(options), { headers: headers })
             .map(response => {

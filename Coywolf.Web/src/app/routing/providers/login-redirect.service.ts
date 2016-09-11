@@ -10,7 +10,7 @@ export class LoginRedirectService {
 
     loginUrl: string = "/login";
     lastPath: string;
-    defaultPath: string = "/";
+    defaultPath: string = "/admin";
     setLoginUrl = value => this.loginUrl = value;
     setDefaultUrl = value => this.defaultPath = value;
 
@@ -21,10 +21,10 @@ export class LoginRedirectService {
 
     public redirectPreLogin = () => {
         if (this.lastPath && this.lastPath != this.loginUrl) {
-            // Redirect to last path
+            this._router.navigate([this.lastPath]);
             this.lastPath = "";
         } else {
-            // Redirect to default path
+            this._router.navigate([this.defaultPath]);
         }
     }
 }

@@ -1,8 +1,5 @@
-using Coywolf.Data;
 using Coywolf.Dtos;
-using Coywolf.Models;
 using Coywolf.Services;
-using System.Collections.Generic;
 using System.Web.Http;
 using System.Web.Http.Description;
 
@@ -20,7 +17,7 @@ namespace Coywolf.Controllers
         [Route("current")]
         [AllowAnonymous]
         [HttpGet]
-        [ResponseType(typeof(ICollection<UserDto>))]
+        [ResponseType(typeof(UserDto))]
         public IHttpActionResult Current() {
             if (!User.Identity.IsAuthenticated)
                 return Ok();

@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy, Input } from "@angular/core";
-import { Router } from "@angular/router";
 import { AuthenticationActions } from "../../../actions";
 import { AppStore } from "../../../store";
 import { LoginRedirectService } from "../../../routing";
@@ -14,12 +13,11 @@ export class LoginPageComponent {
     constructor(
         private _authenticationActions: AuthenticationActions,
         private _loginRedirectService:  LoginRedirectService,
-        private _store: AppStore,
-        private _router: Router
+        private _store: AppStore
     ) {
-        _store.currentUser$.subscribe(currentUser => {
-            if (currentUser != null)
-                this._router.navigate([this._loginRedirectService.lastPath]);
+        _store.currentUser$.subscribe(currentUser => {            
+            if (currentUser)
+                this._loginRedirectService.redirectPreLogin();
         });
     }
 

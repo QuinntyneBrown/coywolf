@@ -22,15 +22,13 @@ export class AuthenticationGuard {
         next: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ) {
-        return Observable.of(true);
+        if (this._token) {
+            return Observable.of(true);
+        }
 
-        //if (this._token) {
-        //    return Observable.of(true);
-        //}
-
-        //this._loginRedirectService.lastPath = state.url;
-        //this._router.navigate([this._loginRedirectService.loginUrl], { queryParams: { redirectTo: state.url } });
-        //return Observable.of(true);
+        this._loginRedirectService.lastPath = state.url;
+        this._router.navigate([this._loginRedirectService.loginUrl]);
+        return Observable.of(false);
     }
     private _token: string;
 }
