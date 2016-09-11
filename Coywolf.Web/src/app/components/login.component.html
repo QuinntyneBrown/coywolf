@@ -3,9 +3,9 @@
     <h1>Login</h1>
 
     <form novalidate [formGroup]="form">
-        <input type="text" placeholder="Username" />
+        <input type="text" placeholder="Username" formControlName="username" />
 
-        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Password" formControlName="password" />
 
         <button type="submit" (click)="tryToLogin.emit({ value: form.value })">Login</button>
     </form>

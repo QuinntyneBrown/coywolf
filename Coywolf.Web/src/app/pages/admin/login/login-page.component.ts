@@ -23,10 +23,10 @@ export class LoginPageComponent {
         });
     }
 
-    public tryToLogin($event: { username:string, password: string }) {
+    public tryToLogin($event: { value: { username: string, password: string } }) {
         this._authenticationActions.tryToLogin({
-            username: $event.username,
-            password: $event.password
+            username: $event.value.username,
+            password: $event.value.password
         });
     }
 }

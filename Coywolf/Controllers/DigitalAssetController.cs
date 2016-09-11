@@ -117,8 +117,6 @@ namespace Coywolf.Controllers
         protected readonly IDigitalAssetService _digitalAssetService;        
         protected readonly IRepository<DigitalAsset> _repository;
         protected readonly IUow _uow;
-        protected readonly ICache _cache;
-
-
+        protected readonly ICache _cache;        
     }
 }

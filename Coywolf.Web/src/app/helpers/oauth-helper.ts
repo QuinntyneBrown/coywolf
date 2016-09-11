@@ -11,9 +11,9 @@ export class OAuthHelper {
         this._store.token$.take(1).subscribe(token => _token = token);
         return _token;
     }
-    public getOAuthHeaders() {
+    public getOAuthHeaders() {        
         let headers = new Headers();        
-        headers.append('Authorization', `Bearer: ${this.token}`);
+        headers.append('Authorization', `Bearer ${this.token}`);
         return headers;
     }
 }

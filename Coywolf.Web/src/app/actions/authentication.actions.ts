@@ -19,6 +19,14 @@ export class AuthenticationActions {
                     type: USER_LOGGED_IN,
                     payload: token
                 }, newGuid);
+
+                this._authenticationService.getCurrentUser()
+                    .subscribe(currentUser => {
+                        this._store.dispatch({
+                            type: GET_CURRENT_USER_SUCCESS,
+                            payload: currentUser
+                        }, newGuid);
+                    });
             });
         return newGuid;
     }

@@ -1,7 +1,8 @@
 ﻿import { Injectable } from "@angular/core";
-import { Http } from "@angular/http";
+import { Http, Headers } from "@angular/http";
 import { Observable } from "rxjs";
 import { OAuthHelper } from "../helpers";
+import { formEncode, extractData } from "../utilities";
 
 import { apiCofiguration } from "../configuration";
 
@@ -9,11 +10,16 @@ import { apiCofiguration } from "../configuration";
 export class AuthenticationService {
     constructor(private _http: Http, private _oauthHelper: OAuthHelper) { }
 
-    public tryToLogin(options: { username:string, password: string }) {
+    public tryToLogin(options: { username: string, password: string }) {
+        Object.assign(options, { grant_type: "password" });
+        let headers = new Headers();
+        headers.set("Content-Type", "application/x-www-form-urlencoded");        
         return this._http
-            .post(`${apiCofiguration.baseUrl}/api/user/token`, options)
-            .map(data => data.json())
-            .catch(err => {
+            .post(`${apiCofiguration.baseUrl}/api/user/token`, formEncode(options), { headers: headers })
+            .map(response => {
+                return response.json()["access_token"];
+            })
+            .catch(err => {            
                 return Observable.of(false);
             });
     }

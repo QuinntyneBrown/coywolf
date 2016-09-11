@@ -5,6 +5,7 @@ using System.Linq;
 using Coywolf.Models;
 using System.IO;
 using System;
+using System.Data.Entity.Migrations;
 
 
 namespace Coywolf.Migrations
@@ -14,16 +15,12 @@ namespace Coywolf.Migrations
         public static void Seed(DataContext context) {
             foreach (var file in GetFiles(@"C:\coywolf_digital_assets"))
             {
-                byte[] bytes = ReadAllBytes(file);
-                var fileName = new FileInfo(file).Name;
-                if (context.DigitalAssets.Where(x => x.Name == fileName).FirstOrDefault() == null)
-                {
-                    var digitalAsset = new DigitalAsset();
-                    digitalAsset.Name = fileName;
-                    digitalAsset.ContentType = GetContentType(file);
-                    digitalAsset.Bytes = bytes;
-                    context.DigitalAssets.Add(digitalAsset);
-                }
+                byte[] bytes = ReadAllBytes(file);                
+                context.DigitalAssets.AddOrUpdate(x => x.FileName, new DigitalAsset() {
+                    FileName = new FileInfo(file).Name,
+                    ContentType = GetContentType(file),
+                    Bytes = bytes
+                });
             }
             context.SaveChanges();
         }
