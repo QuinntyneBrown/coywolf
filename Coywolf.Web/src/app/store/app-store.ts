@@ -49,6 +49,13 @@ export class AppStore {
             });
     }
 
+    public get currentUser$(): Observable<string> {
+        return this._store.select("currentUser")
+            .map((data: { currentUser: any }) => {
+                return data.currentUser;
+            });
+    }
+
     public digitalAssets$(): Observable<Array<PhotoGallery>> {
         return this._store.select("digitalAssets")
             .map((data: { digitalAssets: Array<PhotoGallery> }) => {

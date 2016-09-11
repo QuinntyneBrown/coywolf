@@ -19,7 +19,7 @@ using WebApi.OutputCache.V2;
 namespace Coywolf.Controllers
 {
     [Authorize]
-    [RoutePrefix("api/digitalAsset")]
+    [RoutePrefix("api/digitalasset")]
     public class DigitalAssetController : ApiController
     {
         public DigitalAssetController(IDigitalAssetService digitalAssetService, IUow uow, ICacheProvider cacheProvider)

@@ -21,7 +21,9 @@ import {
     DigitalAssetListPageComponent,
 
     EditPhotoGalleryPageComponent,
-    PhotoGalleryListPageComponent
+    PhotoGalleryListPageComponent,
+
+    LoginPageComponent
     
 } from "../pages";
 
@@ -29,7 +31,7 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'admin',
+        redirectTo: 'login',
     },
     {
         path: 'home',
@@ -54,6 +56,10 @@ export const routes: Routes = [
     {
         path: 'contact',
         component: AboutPageComponent
+    },
+    {
+        path: 'login',
+        component: LoginPageComponent
     }
 ];
 
@@ -112,6 +118,8 @@ export const RoutingModule = RouterModule.forRoot([
 export const routedComponents = [
     AboutPageComponent,
     HomePageComponent,
+
+    LoginPageComponent,
 
     AdminComponent,
 

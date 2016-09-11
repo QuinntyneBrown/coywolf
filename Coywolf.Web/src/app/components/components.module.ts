@@ -4,11 +4,13 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { NavComponent } from './nav';
+import { LoginComponent } from "./login.component";
 import { SideNavComponent } from './admin';
 import { WysiwygComponent } from "./wysiwyg";
 import { ProfessionalServiceEditorComponent } from "./professional-service";
 
 const declarables = [
+    LoginComponent,
     NavComponent,
     SideNavComponent,
     WysiwygComponent,

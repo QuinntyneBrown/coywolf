@@ -216,6 +216,18 @@
     <Content Include="src\app\components\admin\side-nav\side-nav.component.scss">
       <DependentUpon>side-nav.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\digital-asset\digital-asset-list.component.html">
+      <DependentUpon>digital-asset-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\digital-asset\digital-asset-list.component.scss">
+      <DependentUpon>digital-asset-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\login.component.html">
+      <DependentUpon>login.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\login.component.scss">
+      <DependentUpon>login.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\components\nav\nav.component.html">
       <DependentUpon>nav.component.ts</DependentUpon>
     </Content>
@@ -358,9 +370,7 @@
       <Name>Coywolf</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\app\components\digital-asset\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -403,7 +413,6 @@
   <ItemGroup>
     <TypeScriptCompile Include="src\app\actions\actions.module.ts" />
     <TypeScriptCompile Include="src\app\actions\authentication.actions.ts" />
-    <TypeScriptCompile Include="src\app\actions\index.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\models\view-model-type.ts" />
@@ -411,7 +420,6 @@
     <TypeScriptCompile Include="src\app\components\admin\index.ts" />
     <TypeScriptCompile Include="src\app\components\admin\side-nav\index.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
-    <TypeScriptCompile Include="src\app\components\index.ts" />
     <TypeScriptCompile Include="src\app\components\nav\index.ts" />
     <TypeScriptCompile Include="src\app\components\professional-service\index.ts" />
     <TypeScriptCompile Include="src\app\components\professional-service\professional-service-editor\index.ts" />
@@ -427,10 +435,9 @@
     <TypeScriptCompile Include="src\app\constants\photo-gallery\index.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\helpers\index.ts" />
-    <TypeScriptCompile Include="src\app\helpers\oauth.helper.ts" />
+    <TypeScriptCompile Include="src\app\helpers\oauth-helper.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\models\digital-asset.model.ts" />
-    <TypeScriptCompile Include="src\app\models\index.ts" />
     <TypeScriptCompile Include="src\app\models\photo-gallery.model.ts" />
     <TypeScriptCompile Include="src\app\models\professional-service.model.ts" />
     <TypeScriptCompile Include="src\app\pages\about\index.ts" />
@@ -467,7 +474,6 @@
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="src\app\services\digital-asset.service.ts" />
-    <TypeScriptCompile Include="src\app\services\index.ts" />
     <TypeScriptCompile Include="src\app\services\authentication.service.ts" />
     <TypeScriptCompile Include="src\app\services\photo-gallery.service.ts" />
     <TypeScriptCompile Include="src\app\services\professional-service.service.ts" />
@@ -534,6 +540,15 @@
     <TypeScriptCompile Include="src\app\constants\view-model\get-view-model-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\view-model\get-view-model-by-type-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\view-model\index.ts" />
+    <TypeScriptCompile Include="src\app\models\index.ts" />
+    <TypeScriptCompile Include="src\app\actions\index.ts" />
+    <TypeScriptCompile Include="src\app\components\index.ts" />
+    <TypeScriptCompile Include="src\app\components\photo-grid\index.ts" />
+    <TypeScriptCompile Include="src\app\components\digital-asset\digital-asset-list.component.ts" />
+    <TypeScriptCompile Include="src\app\components\digital-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\services\index.ts" />
+    <TypeScriptCompile Include="src\app\helpers\helpers.module.ts" />
+    <TypeScriptCompile Include="src\app\components\login.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

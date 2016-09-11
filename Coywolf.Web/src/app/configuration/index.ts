@@ -1,1 +1,1 @@
-﻿export * from "./api-configuration";
+export * from "./api-configuration";
