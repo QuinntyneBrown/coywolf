@@ -2,14 +2,15 @@
 
 import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
 
+export interface Photo {
+    url: string;
+}
+
 @Component({
     template: require("./photo-grid.component.html"),
     styles: [require("./photo-grid.component.scss")],
-    selector: "photo-grid",
-    changeDetection: ChangeDetectionStrategy.OnPush
+    selector: "photo-grid"    
 })
-export class PhotoGridComponent implements OnInit { 
-    ngOnInit() {
-
-    }
+export class PhotoGridComponent  { 
+    @Input() public photos: Array<Photo> = [];
 }

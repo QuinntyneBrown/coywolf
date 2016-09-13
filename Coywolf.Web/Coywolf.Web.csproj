@@ -232,10 +232,10 @@
     <Content Include="src\app\components\nav\nav.component.scss">
       <DependentUpon>nav.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\photo-grid\photo-grid.component.html">
+    <Content Include="src\app\components\photo-grid.component.html">
       <DependentUpon>photo-grid.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\photo-grid\photo-grid.component.scss">
+    <Content Include="src\app\components\photo-grid.component.scss">
       <DependentUpon>photo-grid.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\components\professional-service\professional-service-editor\professional-service-editor.component.html" />
@@ -533,7 +533,7 @@
     <TypeScriptCompile Include="src\app\pages\admin\admin.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\side-nav\side-nav.component.ts" />
     <TypeScriptCompile Include="src\app\components\wysiwyg\wysiwyg.component.ts" />
-    <TypeScriptCompile Include="src\app\components\photo-grid\photo-grid.component.ts" />
+    <TypeScriptCompile Include="src\app\components\photo-grid.component.ts" />
     <TypeScriptCompile Include="src\app\actions\view-model.actions.ts" />
     <TypeScriptCompile Include="src\app\constants\view-model\get-view-model-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\view-model\get-view-model-by-type-success.action.ts" />
@@ -541,7 +541,6 @@
     <TypeScriptCompile Include="src\app\models\index.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
-    <TypeScriptCompile Include="src\app\components\photo-grid\index.ts" />
     <TypeScriptCompile Include="src\app\components\digital-asset\digital-asset-list.component.ts" />
     <TypeScriptCompile Include="src\app\components\digital-asset\index.ts" />
     <TypeScriptCompile Include="src\app\services\index.ts" />
