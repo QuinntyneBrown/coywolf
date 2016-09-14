@@ -8,10 +8,10 @@ using System.Web.Http.Description;
 
 namespace Coywolf.Controllers
 {
-    [RoutePrefix("api/pagecontent")]
-    public class PageContentController: ApiController
+    [RoutePrefix("api/content")]
+    public class ContentController: ApiController
     {
-        public PageContentController(IPageContentService pageContentService)
+        public ContentController(IContentService pageContentService)
         {
             _pageContentService = pageContentService;
         }
@@ -39,6 +39,6 @@ namespace Coywolf.Controllers
             return Ok();
         }
 
-        public IPageContentService _pageContentService;
+        public IContentService _pageContentService;
     }
 }

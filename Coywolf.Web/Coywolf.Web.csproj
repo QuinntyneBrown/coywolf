@@ -424,12 +424,10 @@
     <TypeScriptCompile Include="src\app\components\wysiwyg\index.ts" />
     <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
     <TypeScriptCompile Include="src\app\configuration\index.ts" />
-    <TypeScriptCompile Include="src\app\constants\authentication\get-current-user-success.ts" />
-    <TypeScriptCompile Include="src\app\constants\authentication\index.ts" />
-    <TypeScriptCompile Include="src\app\constants\authentication\user-logged-in.ts" />
-    <TypeScriptCompile Include="src\app\constants\authentication\user-logged-out.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-current-user-success.ts" />
+    <TypeScriptCompile Include="src\app\constants\user-logged-in.ts" />
+    <TypeScriptCompile Include="src\app\constants\user-logged-out.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />
-    <TypeScriptCompile Include="src\app\constants\photo-gallery\index.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\helpers\index.ts" />
     <TypeScriptCompile Include="src\app\helpers\oauth-helper.ts" />
@@ -516,17 +514,15 @@
     <TypeScriptCompile Include="src\app\pages\contact\contact-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\not-found\not-found-page.component.ts" />
     <TypeScriptCompile Include="src\app\components\nav\nav.component.ts" />
-    <TypeScriptCompile Include="src\app\constants\photo-gallery\add-photo-gallery-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\photo-gallery\get-photo-gallery-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\photo-gallery\remove-photo-gallery-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\professional-service\add-professional-service-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\professional-service\get-professional-service-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\professional-service\remove-professional-service-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\professional-service\index.ts" />
-    <TypeScriptCompile Include="src\app\constants\digital-asset\add-digital-asset-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\digital-asset\get-digital-asset-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\digital-asset\remove-digital-asset-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\digital-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-photo-gallery-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-photo-gallery-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-photo-gallery-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-professional-service-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-professional-service-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-professional-service-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-digital-asset-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-digital-asset-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-digital-asset-success.action.ts" />
     <TypeScriptCompile Include="src\app\actions\digital-asset.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\professional-service.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\photo-gallery.actions.ts" />
@@ -535,9 +531,8 @@
     <TypeScriptCompile Include="src\app\components\wysiwyg\wysiwyg.component.ts" />
     <TypeScriptCompile Include="src\app\components\photo-grid.component.ts" />
     <TypeScriptCompile Include="src\app\actions\view-model.actions.ts" />
-    <TypeScriptCompile Include="src\app\constants\view-model\get-view-model-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\view-model\get-view-model-by-type-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\view-model\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-view-model-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-view-model-by-type-success.action.ts" />
     <TypeScriptCompile Include="src\app\models\index.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
@@ -547,6 +542,11 @@
     <TypeScriptCompile Include="src\app\helpers\helpers.module.ts" />
     <TypeScriptCompile Include="src\app\components\login.component.ts" />
     <TypeScriptCompile Include="src\app\content-models\gallery-page-content.model.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-content-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-content-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-content-success.action.ts" />
+    <TypeScriptCompile Include="src\app\actions\content.actions.ts" />
+    <TypeScriptCompile Include="src\app\services\content.service.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

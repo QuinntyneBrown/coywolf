@@ -1,5 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit, ViewEncapsulation } from "@angular/core";
 
+import { AppStore } from "./store";
+
 @Component({
     template: require("./app.component.html"),
     styles: [require("./app.component.scss")],
@@ -7,4 +9,13 @@ import { Component, ChangeDetectionStrategy, Input, OnInit, ViewEncapsulation } 
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None
 })
-export class AppComponent { }
+export class AppComponent implements OnInit {
+
+    constructor(private _store: AppStore) {
+
+    }
+
+    ngOnInit() {
+    
+    }
+}
