@@ -24,12 +24,15 @@ namespace Coywolf.Migrations
             mainGallery.PhotoGalleryDigitalAssets.Clear();
             foreach(var digitalAsset in context.DigitalAssets)
             {
-
-                mainGallery.PhotoGalleryDigitalAssets.Add(
+                if(digitalAsset.FileName.Contains("gallery_main_"))
+                {
+                    mainGallery.PhotoGalleryDigitalAssets.Add(
                     new PhotoGalleryDigitalAsset()
                     {
                         DigitalAsset = digitalAsset
                     });
+                }
+                
             }
 
             context.SaveChanges();

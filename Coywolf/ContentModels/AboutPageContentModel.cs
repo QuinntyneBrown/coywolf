@@ -4,26 +4,26 @@ using Microsoft.Practices.Unity;
 
 namespace Coywolf.ContentModels
 {    
-    public class HomePageContentModel: IHomePageContentModel
+    public class AboutPageContentModel: IAboutPageContentModel
     {
         [InjectionConstructor]
-        public HomePageContentModel(IUow uow, ICacheProvider cacheProvider)
+        public AboutPageContentModel(IUow uow, ICacheProvider cacheProvider)
         :this(uow,cacheProvider.GetCache()){}
 
-        public HomePageContentModel(IUow uow, ICache cache)
+        public AboutPageContentModel(IUow uow, ICache cache)
         {
             _cache = cache;
             _uow = uow;
         }
 
-        public IHomePageContentModel Get()
+        public IAboutPageContentModel Get()
         {
-            var contentModel = new HomePageContentModel(_uow, _cache);
+            var contentModel = new AboutPageContentModel(_uow, _cache);
             
             return contentModel;
         }
 		
-		public ContentModelType ContentModelType { get; set; } = ContentModelType.HomePage;
+		public ContentModelType ContentModelType { get; set; } = ContentModelType.AboutPage;
 
         protected readonly IUow _uow;
         protected readonly ICache _cache;

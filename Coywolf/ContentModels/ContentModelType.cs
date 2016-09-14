@@ -3,11 +3,11 @@
     public enum ContentModelType
     {
         AppShell,
-        Home,
-        About,
-        Services,
-        Contact,
-        WhatsNew,
-        Gallery
+        HomePage,
+        AboutPage,
+        ServicesPage,
+        ContactPage,
+        WhatsNewPage,
+        GalleryPage
     }
 }

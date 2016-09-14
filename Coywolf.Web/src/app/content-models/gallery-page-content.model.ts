@@ -1,4 +1,5 @@
+import { DigitalAsset } from "../models";
+
 export class GalleryPageContent { 
-	public id:number;
-	public name:string;
+    public photos: Array<DigitalAsset> = [];
 }

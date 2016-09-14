@@ -1,4 +1,5 @@
 using Coywolf.Configuration;
+using Coywolf.ContentModels;
 using Coywolf.Data;
 using Coywolf.Services;
 using Coywolf.Utilities;
@@ -22,10 +23,17 @@ namespace Coywolf
             container.RegisterType<ILogger, Logger>();
             container.RegisterType<IProfessionalServiceService, ProfessionalServiceService>();
             container.RegisterType<IDigitalAssetService, DigitalAssetService>();
-            container.RegisterType<IPhotoGalleryService, PhotoGalleryService>();
-            container.RegisterType<IViewModelService, ViewModelService>();
+            container.RegisterType<IPhotoGalleryService, PhotoGalleryService>();            
             container.RegisterType<IUserService, UserService>();
-            container.RegisterType<IContentService, ContentService>();
+
+            container.RegisterType<IAppShellContentModel, AppShellContentModel>();
+            container.RegisterType<IHomePageContentModel, HomePageContentModel>();
+            container.RegisterType<IGalleryPageContentModel, GalleryPageContentModel>();
+            container.RegisterType<IWhatsNewPageContentModel, WhatsNewPageContentModel>();
+            container.RegisterType<IServicesPageContentModel, ServicesPageContentModel>();
+            container.RegisterType<IAboutPageContentModel, AboutPageContentModel>();
+            container.RegisterType<IContactPageContentModel, ContactPageContentModel>();
+
             container.RegisterInstance(AuthConfiguration.LazyConfig);            
             return container;
         }
