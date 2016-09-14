@@ -546,6 +546,7 @@
     <TypeScriptCompile Include="src\app\services\index.ts" />
     <TypeScriptCompile Include="src\app\helpers\helpers.module.ts" />
     <TypeScriptCompile Include="src\app\components\login.component.ts" />
+    <TypeScriptCompile Include="src\app\content-models\gallery-page-content.model.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

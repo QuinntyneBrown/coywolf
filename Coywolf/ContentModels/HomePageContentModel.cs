@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Coywolf.ViewModels
+namespace Coywolf.ContentModels
 {
-    class HomeViewModel
+    public class HomePageContentModel
     {
     }
 }

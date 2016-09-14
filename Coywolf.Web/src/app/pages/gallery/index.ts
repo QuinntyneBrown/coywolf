@@ -1,1 +1,1 @@
-﻿export * from "./gallery-page.component";
+export * from "./gallery-page.component";

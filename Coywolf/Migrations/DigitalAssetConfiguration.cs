@@ -13,7 +13,7 @@ namespace Coywolf.Migrations
     public class DigitalAssetConfiguration
     {
         public static void Seed(DataContext context) {
-            foreach (var file in GetFiles(@"C:\coywolf_digital_assets"))
+            foreach (var file in GetFiles(@"C:\coywolf_digital_assets\gallery"))
             {
                 byte[] bytes = ReadAllBytes(file);                
                 context.DigitalAssets.AddOrUpdate(x => x.FileName, new DigitalAsset() {

@@ -1,6 +1,6 @@
-﻿namespace Coywolf.ViewModels
+﻿namespace Coywolf.ContentModels
 {
-    public enum ViewModelType
+    public enum ContentModelType
     {
         AppShell,
         Home,

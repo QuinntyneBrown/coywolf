@@ -1,10 +1,10 @@
-﻿using Coywolf.ViewModels;
+﻿using Coywolf.ContentModels;
 
 namespace Coywolf.Services
 {
     public interface IViewModelService
     {
-        AppShellViewModel GetAppShell();
-        dynamic GetByType(ViewModelType type);
+        AppShellContentModel GetAppShell();
+        dynamic GetByType(ContentModelType type);
     }
 }

@@ -1,21 +1,21 @@
-﻿using Coywolf.ViewModels;
+﻿using Coywolf.ContentModels;
 using System;
 
 namespace Coywolf.Services
 {
     class ViewModelService : IViewModelService
     {
-        public AppShellViewModel GetAppShell()
+        public AppShellContentModel GetAppShell()
         {
-            return new AppShellViewModel()
+            return new AppShellContentModel()
             {
                 LogoUrl = "api/digitalasset/serve?name=logo.png"
             };
         }
 
-        public dynamic GetByType(ViewModelType type)
+        public dynamic GetByType(ContentModelType type)
         {
-            if (type == ViewModelType.AppShell)
+            if (type == ContentModelType.AppShell)
                 return GetAppShell();
 
             throw new NotImplementedException();

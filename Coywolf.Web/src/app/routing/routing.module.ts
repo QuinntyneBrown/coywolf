@@ -10,6 +10,7 @@ import {
     AboutPageComponent,
     HomePageComponent,
     NotFoundPageComponent,
+    GalleryPageComponent,
 
     // Admin
     AdminComponent,
@@ -39,7 +40,7 @@ export const routes: Routes = [
     },
     {
         path: 'gallery',
-        component: AboutPageComponent
+        component: GalleryPageComponent
     },
     {
         path: 'whats-new',
@@ -118,6 +119,7 @@ export const RoutingModule = RouterModule.forRoot([
 export const routedComponents = [
     AboutPageComponent,
     HomePageComponent,
+    GalleryPageComponent,
 
     LoginPageComponent,
 

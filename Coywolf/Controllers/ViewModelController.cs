@@ -1,5 +1,5 @@
 ﻿using Coywolf.Services;
-using Coywolf.ViewModels;
+using Coywolf.ContentModels;
 using System.Web.Http;
 using WebApi.OutputCache.V2;
 
@@ -16,7 +16,7 @@ namespace Coywolf.Controllers
         [HttpGet]
         [Route("getByType")]
         [CacheOutput(ClientTimeSpan = 1000, ServerTimeSpan = 1000)]
-        public IHttpActionResult GetByType(ViewModelType type)
+        public IHttpActionResult GetByType(ContentModelType type)
             => Ok(_viewModelService.GetByType(type));
 
         protected readonly IViewModelService _viewModelService;
