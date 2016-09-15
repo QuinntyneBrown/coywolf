@@ -1,7 +1,7 @@
 ﻿import { Action } from "@ngrx/store";
-import { GET_CURRENT_USER_SUCCESS, USER_LOGGED_OUT } from "../../../constants";
-import { initialState } from "../../initial-state";
-import { AppState } from "../../app-state";
+import { GET_CURRENT_USER_SUCCESS, USER_LOGGED_OUT } from "../../constants";
+import { initialState } from "../initial-state";
+import { AppState } from "../app-state";
 
 export const currentUserReducer = (state: AppState = initialState, action: Action) => {
     switch (action.type) {

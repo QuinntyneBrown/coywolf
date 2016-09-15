@@ -1,9 +1,9 @@
 import { Action } from "@ngrx/store";
-import { ADD_DIGITAL_ASSET_SUCCESS, GET_DIGITAL_ASSET_SUCCESS, REMOVE_DIGITAL_ASSET_SUCCESS } from "../../../constants";
-import { initialState } from "../../initial-state";
-import { AppState } from "../../app-state";
-import { DigitalAsset } from "../../../models";
-import { addOrUpdate, pluckOut } from "../../../utilities";
+import { ADD_DIGITAL_ASSET_SUCCESS, GET_DIGITAL_ASSET_SUCCESS, REMOVE_DIGITAL_ASSET_SUCCESS } from "../../constants";
+import { initialState } from "../initial-state";
+import { AppState } from "../app-state";
+import { DigitalAsset } from "../../models";
+import { addOrUpdate, pluckOut } from "../../utilities";
 
 export const digitalAssetsReducer = (state: AppState = initialState, action: Action) => {
     switch (action.type) {

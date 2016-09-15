@@ -1,9 +1,9 @@
 import { Action } from "@ngrx/store";
-import { ADD_PHOTO_GALLERY_SUCCESS, GET_PHOTO_GALLERY_SUCCESS, REMOVE_PHOTO_GALLERY_SUCCESS } from "../../../constants";
-import { initialState } from "../../initial-state";
-import { AppState } from "../../app-state";
-import { PhotoGallery } from "../../../models";
-import { addOrUpdate, pluckOut } from "../../../utilities";
+import { ADD_PHOTO_GALLERY_SUCCESS, GET_PHOTO_GALLERY_SUCCESS, REMOVE_PHOTO_GALLERY_SUCCESS } from "../../constants";
+import { initialState } from "../initial-state";
+import { AppState } from "../app-state";
+import { PhotoGallery } from "../../models";
+import { addOrUpdate, pluckOut } from "../../utilities";
 
 export const photoGallerysReducer = (state: AppState = initialState, action: Action) => {
     switch (action.type) {

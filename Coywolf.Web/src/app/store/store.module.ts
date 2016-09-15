@@ -7,7 +7,6 @@ import {
     photoGallerysReducer,
     professionalServicesReducer,
     currentUserReducer,
-    viewModelsReducer,
     tokenReducer
 } from "./reducers";
 
@@ -25,7 +24,6 @@ const providers = [
                 digitalAssets: digitalAssetsReducer,
                 photoGalleries: photoGallerysReducer,
                 professionalServices: professionalServicesReducer,
-                viewModels: viewModelsReducer,
                 currentUser: currentUserReducer,
                 token: tokenReducer
             },

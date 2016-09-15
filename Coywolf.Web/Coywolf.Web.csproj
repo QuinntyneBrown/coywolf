@@ -6,8 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion></ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{658DA84D-AD6C-414A-9333-B89232911187}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -22,8 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -447,8 +445,7 @@
           <IISUrl>http://localhost:56622/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
@@ -522,23 +519,16 @@
     <TypeScriptCompile Include="src\app\services\photo-gallery.service.ts" />
     <TypeScriptCompile Include="src\app\services\professional-service.service.ts" />
     <TypeScriptCompile Include="src\app\services\services.module.ts" />
-    <TypeScriptCompile Include="src\app\services\view-model.service.ts" />
     <TypeScriptCompile Include="src\app\store\app-state.ts" />
     <TypeScriptCompile Include="src\app\store\app-store.ts" />
     <TypeScriptCompile Include="src\app\store\index.ts" />
     <TypeScriptCompile Include="src\app\store\initial-state.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\authentication\current-user.reducer.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\authentication\index.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\authentication\token.reducer.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\digital-asset\digital-asset.reducer.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\digital-asset\index.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\current-user.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\token.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\digital-asset.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\index.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\photo-gallery\index.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\photo-gallery\photo-gallery.reducer.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\professional-service\index.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\professional-service\professional-service.reducer.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\view-model\index.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\view-model\view-model.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\photo-gallery.reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\professional-service.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\store.module.ts" />
     <TypeScriptCompile Include="src\app\utilities\add-or-update.ts" />
     <TypeScriptCompile Include="src\app\utilities\append-to-body-async.ts" />
@@ -578,7 +568,6 @@
     <TypeScriptCompile Include="src\app\components\admin\side-nav.component.ts" />
     <TypeScriptCompile Include="src\app\components\wysiwyg.component.ts" />
     <TypeScriptCompile Include="src\app\components\photo-grid.component.ts" />
-    <TypeScriptCompile Include="src\app\actions\view-model.actions.ts" />
     <TypeScriptCompile Include="src\app\constants\get-view-model-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\get-view-model-by-type-success.action.ts" />
     <TypeScriptCompile Include="src\app\models\index.ts" />
@@ -610,6 +599,7 @@
     <TypeScriptCompile Include="src\app\components\admin\html-content-list.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\html-content-editor.component.ts" />
     <TypeScriptCompile Include="src\app\components\page-footer.component.ts" />
+    <TypeScriptCompile Include="src\app\models\html-content.model.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

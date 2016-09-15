@@ -1,7 +1,7 @@
 ﻿import { Action } from "@ngrx/store";
-import { USER_LOGGED_IN, USER_LOGGED_OUT } from "../../../constants";
-import { initialState } from "../../initial-state";
-import { AppState } from "../../app-state";
+import { USER_LOGGED_IN, USER_LOGGED_OUT } from "../../constants";
+import { initialState } from "../initial-state";
+import { AppState } from "../app-state";
 
 export const tokenReducer = (state: AppState = initialState, action: Action) => {
     switch (action.type) {

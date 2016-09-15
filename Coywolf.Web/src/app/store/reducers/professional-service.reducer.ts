@@ -1,9 +1,9 @@
 import { Action } from "@ngrx/store";
-import { ADD_PROFESSIONAL_SERVICE_SUCCESS, GET_PROFESSIONAL_SERVICE_SUCCESS, REMOVE_PROFESSIONAL_SERVICE_SUCCESS } from "../../../constants";
-import { initialState } from "../../initial-state";
-import { AppState } from "../../app-state";
-import { ProfessionalService } from "../../../models";
-import { addOrUpdate, pluckOut } from "../../../utilities";
+import { ADD_PROFESSIONAL_SERVICE_SUCCESS, GET_PROFESSIONAL_SERVICE_SUCCESS, REMOVE_PROFESSIONAL_SERVICE_SUCCESS } from "../../constants";
+import { initialState } from "../initial-state";
+import { AppState } from "../app-state";
+import { ProfessionalService } from "../../models";
+import { addOrUpdate, pluckOut } from "../../utilities";
 
 export const professionalServicesReducer = (state: AppState = initialState, action: Action) => {
     switch (action.type) {
