@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from "@angular/core";
-import { AuthenticationActions } from "../../../actions";
-import { AppStore } from "../../../store";
-import { LoginRedirectService } from "../../../routing";
+import { AuthenticationActions } from "../actions";
+import { AppStore } from "../store";
+import { LoginRedirectService } from "../routing";
 
 @Component({
     template: require("./login-page.component.html"),

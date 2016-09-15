@@ -316,46 +316,46 @@
     <Content Include="src\app\pages\admin\admin.component.scss">
       <DependentUpon>admin.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\digital-asset\digital-asset-list\digital-asset-list-page.component.html">
+    <Content Include="src\app\pages\admin\digital-asset-list-page.component.html">
       <DependentUpon>digital-asset-list-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\digital-asset\digital-asset-list\digital-asset-list-page.component.scss">
+    <Content Include="src\app\pages\admin\digital-asset-list-page.component.scss">
       <DependentUpon>digital-asset-list-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\digital-asset\upload-digital-asset\upload-digital-asset-page.component.html">
-      <DependentUpon>upload-digital-asset-page.component.ts</DependentUpon>
+    <Content Include="src\app\pages\admin\digital-asset-upload-page.component.html">
+      <DependentUpon>digital-asset-upload-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\digital-asset\upload-digital-asset\upload-digital-asset-page.component.scss">
-      <DependentUpon>upload-digital-asset-page.component.ts</DependentUpon>
+    <Content Include="src\app\pages\admin\digital-asset-upload-page.component.scss">
+      <DependentUpon>digital-asset-upload-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\login\login-page.component.html">
+    <Content Include="src\app\pages\admin\photo-gallery-edit-page.component.html">
+      <DependentUpon>photo-gallery-edit-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\photo-gallery-edit-page.component.scss">
+      <DependentUpon>photo-gallery-edit-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\professional-service-edit-page.component.html">
+      <DependentUpon>professional-service-edit-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\professional-service-edit-page.component.scss">
+      <DependentUpon>professional-service-edit-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\login-page.component.html">
       <DependentUpon>login-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\login\login-page.component.scss">
+    <Content Include="src\app\pages\login-page.component.scss">
       <DependentUpon>login-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\edit-photo-gallery-page.component.html">
-      <DependentUpon>edit-photo-gallery-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\edit-photo-gallery-page.component.scss">
-      <DependentUpon>edit-photo-gallery-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\pages\admin\photo-gallery\photo-gallery-list\photo-gallery-list-page.component.html">
+    <Content Include="src\app\pages\admin\photo-gallery-list-page.component.html">
       <DependentUpon>photo-gallery-list-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\photo-gallery\photo-gallery-list\photo-gallery-list-page.component.scss">
+    <Content Include="src\app\pages\admin\photo-gallery-list-page.component.scss">
       <DependentUpon>photo-gallery-list-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.html">
-      <DependentUpon>edit-professional-service-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.scss">
-      <DependentUpon>edit-professional-service-page.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.html">
+    <Content Include="src\app\pages\admin\professional-service-list-page.component.html">
       <DependentUpon>professional-service-list-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.scss">
+    <Content Include="src\app\pages\admin\professional-service-list-page.component.scss">
       <DependentUpon>professional-service-list-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\pages\contact-page.component.html">
@@ -488,24 +488,14 @@
     <TypeScriptCompile Include="src\app\models\digital-asset.model.ts" />
     <TypeScriptCompile Include="src\app\models\photo-gallery.model.ts" />
     <TypeScriptCompile Include="src\app\models\professional-service.model.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\digital-asset-list\digital-asset-list-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\digital-asset-list\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\upload-digital-asset\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\digital-asset\upload-digital-asset\upload-digital-asset-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digital-asset-list-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\digital-asset-upload-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\login\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\login\login-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\edit-photo-gallery-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\edit-photo-gallery\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\photo-gallery-list\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery\photo-gallery-list\photo-gallery-list-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\professional-service\edit-professional-service\edit-professional-service-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\professional-service\edit-professional-service\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\professional-service\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\professional-service\professional-service-list\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\login-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery-edit-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\photo-gallery-list-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\professional-service-edit-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\professional-service-list-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\index.ts" />
     <TypeScriptCompile Include="src\app\pipes\index.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />

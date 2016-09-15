@@ -1,18 +1,18 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
-import { ProfessionalService } from "../../../../models";
+import { ProfessionalService } from "../../models";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ProfessionalServiceActions } from "../../../../actions";
-import { AppStore } from "../../../../store";
-import { pluck } from "../../../../utilities";
+import { ProfessionalServiceActions } from "../../actions";
+import { AppStore } from "../../store";
+import { pluck } from "../../utilities";
 import { Observable } from "rxjs";
 
 @Component({
-    template: require("./edit-professional-service-page.component.html"),
-    styles: [require("./edit-professional-service-page.component.scss")],
-    selector: "edit-professional-service-page",
+    template: require("./professional-service-edit-page.component.html"),
+    styles: [require("./professional-service-edit-page.component.scss")],
+    selector: "professional-service-edit-page",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EditProfessionalServicePageComponent implements OnInit { 
+export class ProfessionalServiceEditPageComponent implements OnInit { 
 
     constructor(
         private _store: AppStore,

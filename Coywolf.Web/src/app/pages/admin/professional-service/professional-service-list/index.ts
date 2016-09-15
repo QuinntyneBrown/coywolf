@@ -1,1 +1,0 @@
-﻿export * from "./professional-service-list-page.component";

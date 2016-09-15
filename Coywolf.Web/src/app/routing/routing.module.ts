@@ -15,13 +15,13 @@ import {
     // Admin
     AdminComponent,
 
-    EditProfessionalServicePageComponent,
+    ProfessionalServiceEditPageComponent,
     ProfessionalServiceListPageComponent,
 
-    UploadDigitalAssetPageComponent,
+    DigitalAssetUploadPageComponent,
     DigitalAssetListPageComponent,
 
-    EditPhotoGalleryPageComponent,
+    PhotoGalleryEditPageComponent,
     PhotoGalleryListPageComponent,
 
     LoginPageComponent
@@ -73,7 +73,7 @@ export const adminRoutes: Routes = [
         children: [
             {
                 path: '',
-                component: EditProfessionalServicePageComponent
+                component: ProfessionalServiceEditPageComponent
             },
             {
                 path: 'services',
@@ -81,11 +81,11 @@ export const adminRoutes: Routes = [
             },
             {
                 path: 'service/create',
-                component: EditProfessionalServicePageComponent
+                component: ProfessionalServiceEditPageComponent
             },
             {
                 path: 'service/edit/:id',
-                component: EditProfessionalServicePageComponent
+                component: ProfessionalServiceEditPageComponent
             },
             {
                 path: 'digitalassets',
@@ -93,7 +93,7 @@ export const adminRoutes: Routes = [
             },
             {
                 path: 'digitalasset/upload',
-                component: UploadDigitalAssetPageComponent
+                component: DigitalAssetUploadPageComponent
             },
             {
                 path: 'photogalleries',
@@ -101,11 +101,11 @@ export const adminRoutes: Routes = [
             },
             {
                 path: 'photogallery/create',
-                component: EditPhotoGalleryPageComponent
+                component: PhotoGalleryEditPageComponent
             },
             {
                 path: 'photogallery/edit/:id',
-                component: EditPhotoGalleryPageComponent
+                component: PhotoGalleryEditPageComponent
             }
         ]
     },
@@ -125,13 +125,13 @@ export const routedComponents = [
 
     AdminComponent,
 
-    EditProfessionalServicePageComponent,
+    ProfessionalServiceEditPageComponent,
     ProfessionalServiceListPageComponent,
 
-    UploadDigitalAssetPageComponent,
+    DigitalAssetUploadPageComponent,
     DigitalAssetListPageComponent,
 
     PhotoGalleryListPageComponent,
-    EditPhotoGalleryPageComponent
+    PhotoGalleryEditPageComponent
 ];
 
