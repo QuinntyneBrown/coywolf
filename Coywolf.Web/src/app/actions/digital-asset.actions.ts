@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { DigitalAssetService } from "../services";
 import { AppState, AppStore } from "../store";
-import { ADD_DIGITAL_ASSET_SUCCESS, GET_DIGITAL_ASSET_SUCCESS, REMOVE_DIGITAL_ASSET_SUCCESS } from "../constants";
+import { DIGITAL_ASSET_ADD_SUCCESS, DIGITAL_ASSET_GET_SUCCESS, DIGITAL_ASSET_REMOVE_SUCCESS } from "../constants";
 import { DigitalAsset } from "../models";
 import { Observable } from "rxjs";
 import { guid } from "../utilities";
@@ -16,7 +16,7 @@ export class DigitalAssetActions {
         this._digitalAssetService.add(digitalAsset)
             .subscribe(book => {
                 this._store.dispatch({
-                    type: ADD_DIGITAL_ASSET_SUCCESS,
+                    type: DIGITAL_ASSET_ADD_SUCCESS,
                     payload: digitalAsset
                 },newGuid);                
             });
@@ -27,7 +27,7 @@ export class DigitalAssetActions {
         return this._digitalAssetService.get()
             .subscribe(digitalAssets => {
                 this._store.dispatch({
-                    type: GET_DIGITAL_ASSET_SUCCESS,
+                    type: DIGITAL_ASSET_GET_SUCCESS,
                     payload: digitalAssets
                 });
                 return true;
@@ -38,7 +38,7 @@ export class DigitalAssetActions {
         return this._digitalAssetService.remove({ id: options.id })
             .subscribe(digitalAsset => {
                 this._store.dispatch({
-                    type: REMOVE_DIGITAL_ASSET_SUCCESS,
+                    type: DIGITAL_ASSET_REMOVE_SUCCESS,
                     payload: options.id
                 });
                 return true;
@@ -49,7 +49,7 @@ export class DigitalAssetActions {
         return this._digitalAssetService.getById({ id: options.id })
             .subscribe(digitalAsset => {
                 this._store.dispatch({
-                    type: GET_DIGITAL_ASSET_SUCCESS,
+                    type: DIGITAL_ASSET_GET_SUCCESS,
                     payload: [digitalAsset]
                 });
                 return true;

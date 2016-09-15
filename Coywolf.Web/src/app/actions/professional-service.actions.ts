@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { ProfessionalServiceService } from "../services";
 import { AppState, AppStore } from "../store";
-import { ADD_PROFESSIONAL_SERVICE_SUCCESS, GET_PROFESSIONAL_SERVICE_SUCCESS, REMOVE_PROFESSIONAL_SERVICE_SUCCESS } from "../constants";
+import { PROFESSIONAL_SERVICE_ADD_SUCCESS, PROFESSIONAL_SERVICE_GET_SUCCESS, PROFESSIONAL_SERVICE_REMOVE_SUCCESS } from "../constants";
 import { ProfessionalService } from "../models";
 import { Observable } from "rxjs";
 import { guid } from "../utilities";
@@ -16,7 +16,7 @@ export class ProfessionalServiceActions {
         this._professionalServiceService.add(professionalService)
             .subscribe(book => {
                 this._store.dispatch({
-                    type: ADD_PROFESSIONAL_SERVICE_SUCCESS,
+                    type: PROFESSIONAL_SERVICE_ADD_SUCCESS,
                     payload: professionalService
                 },newGuid);                
             });
@@ -27,7 +27,7 @@ export class ProfessionalServiceActions {
         return this._professionalServiceService.get()
             .subscribe(professionalServices => {
                 this._store.dispatch({
-                    type: GET_PROFESSIONAL_SERVICE_SUCCESS,
+                    type: PROFESSIONAL_SERVICE_GET_SUCCESS,
                     payload: professionalServices
                 });
                 return true;
@@ -38,7 +38,7 @@ export class ProfessionalServiceActions {
         return this._professionalServiceService.remove({ id: options.id })
             .subscribe(professionalService => {
                 this._store.dispatch({
-                    type: REMOVE_PROFESSIONAL_SERVICE_SUCCESS,
+                    type: PROFESSIONAL_SERVICE_REMOVE_SUCCESS,
                     payload: options.id
                 });
                 return true;
@@ -49,7 +49,7 @@ export class ProfessionalServiceActions {
         return this._professionalServiceService.getById({ id: options.id })
             .subscribe(professionalService => {
                 this._store.dispatch({
-                    type: GET_PROFESSIONAL_SERVICE_SUCCESS,
+                    type: PROFESSIONAL_SERVICE_GET_SUCCESS,
                     payload: [professionalService]
                 });
                 return true;
