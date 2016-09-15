@@ -1,4 +1,4 @@
-import { Component, Output, Input, EventEmitter } from "@angular/core";
+import { Component, Output, Input, EventEmitter, Renderer, AfterViewInit, ViewChild, ElementRef } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
@@ -6,7 +6,18 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
     styles: [require("./login.component.scss")],
     selector: "login"
 })
-export class LoginComponent { 
+export class LoginComponent implements AfterViewInit { 
+
+    constructor(private _renderer: Renderer, private _elementRef: ElementRef) { }
+
+    public get username(): HTMLElement {
+        return this._elementRef.nativeElement.querySelector("#username");
+    }
+
+    ngAfterViewInit() {
+        this._renderer.invokeElementMethod(this.username, 'focus', []);
+    }
+
     @Output() public tryToLogin: EventEmitter<any> = new EventEmitter();
 
     public form = new FormGroup({
