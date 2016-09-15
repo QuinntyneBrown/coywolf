@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
-import { Content } from "../models";
+import { HtmlContent } from "../models";
 import { Observable } from "rxjs";
 import { extractData } from "../utilities";
 
@@ -8,12 +8,12 @@ import { apiCofiguration } from "../configuration";
 
 
 @Injectable()
-export class ContentService {
+export class HtmlContentService {
     constructor(private _http: Http) { }
 
-    public add(entity: Content) {
+    public add(entity: HtmlContent) {
         return this._http
-            .post(`${apiCofiguration.baseUrl}/api/content/add`, entity)
+            .post(`${apiCofiguration.baseUrl}/api/htmlcontent/add`, entity)
             .map(data => data.json())
             .catch(err => {
                 return Observable.of(false);
@@ -22,7 +22,7 @@ export class ContentService {
 
     public get() {
         return this._http
-            .get(`${apiCofiguration.baseUrl}/api/content/get`)
+            .get(`${apiCofiguration.baseUrl}/api/htmlcontent/get`)
             .map(data => data.json())
             .catch(err => {
                 return Observable.of(false);
@@ -31,7 +31,7 @@ export class ContentService {
 
     public getById(options: { id: number }) {
         return this._http
-            .get(`${apiCofiguration.baseUrl}/api/content/getById?id=${options.id}`)
+            .get(`${apiCofiguration.baseUrl}/api/htmlcontent/getById?id=${options.id}`)
             .map(data => data.json())
             .catch(err => {
                 return Observable.of(false);
@@ -40,7 +40,7 @@ export class ContentService {
 
     public remove(options: { id: number }) {
         return this._http
-            .delete(`${apiCofiguration.baseUrl}/api/content/remove?id=${options.id}`)
+            .delete(`${apiCofiguration.baseUrl}/api/htmlcontent/remove?id=${options.id}`)
             .map(data => data.json())
             .catch(err => {
                 return Observable.of(false);

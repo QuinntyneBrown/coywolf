@@ -8,24 +8,24 @@ import { addOrUpdate, pluckOut } from "../../utilities";
 export const photoGallerysReducer = (state: AppState = initialState, action: Action) => {
     switch (action.type) {
         case PHOTO_GALLERY_ADD_SUCCESS:
-            var entities: Array<PhotoGallery> = state.photoGallerys;
+            var entities: Array<PhotoGallery> = state.photoGalleries;
             var entity: PhotoGallery = action.payload;
             addOrUpdate({ items: entities, item: entity});            
-            return Object.assign({}, state, { photoGallerys: entities });
+            return Object.assign({}, state, { photoGalleries: entities });
 
         case PHOTO_GALLERY_GET_SUCCESS:
-            var entities: Array<PhotoGallery> = state.photoGallerys;
-            var newOrExistingPhotoGallerys: Array<PhotoGallery> = action.payload;
-            for (let i = 0; i < newOrExistingPhotoGallerys.length; i++) {
-                addOrUpdate({ items: entities, item: newOrExistingPhotoGallerys[i] });
+            var entities: Array<PhotoGallery> = state.photoGalleries;
+            var newOrExistingPhotoGalleries: Array<PhotoGallery> = action.payload;
+            for (let i = 0; i < newOrExistingPhotoGalleries.length; i++) {
+                addOrUpdate({ items: entities, item: newOrExistingPhotoGalleries[i] });
             }                                    
             return Object.assign({}, state, { photoGallerys: entities });
 
         case PHOTO_GALLERY_REMOVE_SUCCESS:
-            var entities: Array<PhotoGallery> = state.photoGallerys;
+            var entities: Array<PhotoGallery> = state.photoGalleries;
             var id = action.payload;
             pluckOut({ value: id, items: entities });
-            return Object.assign({}, state, { photoGallerys: entities });
+            return Object.assign({}, state, { photoGalleries: entities });
 
         default:
             return state;

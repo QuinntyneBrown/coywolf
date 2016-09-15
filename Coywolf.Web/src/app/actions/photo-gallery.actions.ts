@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { PhotoGalleryService } from "../services";
 import { AppState, AppStore } from "../store";
-import { ADD_PHOTO_GALLERY_SUCCESS, GET_PHOTO_GALLERY_SUCCESS, REMOVE_PHOTO_GALLERY_SUCCESS } from "../constants";
+import { PHOTO_GALLERY_ADD_SUCCESS, PHOTO_GALLERY_GET_SUCCESS, PHOTO_GALLERY_REMOVE_SUCCESS } from "../constants";
 import { PhotoGallery } from "../models";
 import { Observable } from "rxjs";
 import { guid } from "../utilities";
@@ -16,7 +16,7 @@ export class PhotoGalleryActions {
         this._photoGalleryService.add(photoGallery)
             .subscribe(book => {
                 this._store.dispatch({
-                    type: ADD_PHOTO_GALLERY_SUCCESS,
+                    type: PHOTO_GALLERY_ADD_SUCCESS,
                     payload: photoGallery
                 },newGuid);                
             });
@@ -27,7 +27,7 @@ export class PhotoGalleryActions {
         return this._photoGalleryService.get()
             .subscribe(photoGallerys => {
                 this._store.dispatch({
-                    type: GET_PHOTO_GALLERY_SUCCESS,
+                    type: PHOTO_GALLERY_GET_SUCCESS,
                     payload: photoGallerys
                 });
                 return true;
@@ -38,7 +38,7 @@ export class PhotoGalleryActions {
         return this._photoGalleryService.remove({ id: options.id })
             .subscribe(photoGallery => {
                 this._store.dispatch({
-                    type: REMOVE_PHOTO_GALLERY_SUCCESS,
+                    type: PHOTO_GALLERY_REMOVE_SUCCESS,
                     payload: options.id
                 });
                 return true;
@@ -49,7 +49,7 @@ export class PhotoGalleryActions {
         return this._photoGalleryService.getById({ id: options.id })
             .subscribe(photoGallery => {
                 this._store.dispatch({
-                    type: GET_PHOTO_GALLERY_SUCCESS,
+                    type: PHOTO_GALLERY_GET_SUCCESS,
                     payload: [photoGallery]
                 });
                 return true;

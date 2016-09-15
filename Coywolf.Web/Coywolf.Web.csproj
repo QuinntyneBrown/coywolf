@@ -595,6 +595,7 @@
     <TypeScriptCompile Include="src\app\actions\html-content.actions.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\html-content.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\content.reducer.ts" />
+    <TypeScriptCompile Include="src\app\services\html-content.service.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

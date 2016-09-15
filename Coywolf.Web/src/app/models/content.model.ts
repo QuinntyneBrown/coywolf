@@ -1,3 +1,4 @@
 ﻿export interface Content {
-    public type: string;
+    id: number;
+    type: string;
 }
