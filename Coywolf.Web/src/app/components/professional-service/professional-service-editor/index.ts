@@ -1,1 +1,0 @@
-﻿export * from "./professional-service-editor.component";

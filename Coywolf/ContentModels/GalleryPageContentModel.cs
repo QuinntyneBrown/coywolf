@@ -1,6 +1,8 @@
 using Coywolf.Data;
 using Coywolf.Services;
 using Microsoft.Practices.Unity;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Coywolf.ContentModels
 {    
@@ -8,24 +10,23 @@ namespace Coywolf.ContentModels
     {
         [InjectionConstructor]
         public GalleryPageContentModel(IUow uow, ICacheProvider cacheProvider)
-        :this(uow,cacheProvider.GetCache()){}
+        :this(cacheProvider.GetCache()){}
 
-        public GalleryPageContentModel(IUow uow, ICache cache)
+        public GalleryPageContentModel(ICache cache)
         {
             _cache = cache;
-            _uow = uow;
         }
 
         public IGalleryPageContentModel Get()
         {
-            var contentModel = new GalleryPageContentModel(_uow, _cache);
+            var contentModel = new GalleryPageContentModel(_cache);
             
             return contentModel;
         }
 		
+		[JsonConverter(typeof(StringEnumConverter))]
 		public ContentModelType ContentModelType { get; set; } = ContentModelType.GalleryPage;
 
-        protected readonly IUow _uow;
         protected readonly ICache _cache;
     }
 }

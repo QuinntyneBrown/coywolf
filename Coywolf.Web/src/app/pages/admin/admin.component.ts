@@ -1,6 +1,5 @@
-/// <reference path="../../components/admin/side-nav/side-nav.component.ts" />
 import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
-import { SideNavComponent } from "../../components/admin/side-nav";
+import { SideNavComponent } from "../../components/admin";
 
 @Component({
     template: require("./admin.component.html"),

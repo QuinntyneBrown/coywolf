@@ -218,6 +218,7 @@
     <Compile Include="Migrations\ProfessionalServiceConfiguration.cs" />
     <Compile Include="Migrations\UserConfiguration.cs" />
     <Compile Include="Models\DigitalAsset.cs" />
+    <Compile Include="Models\HtmlContent.cs" />
     <Compile Include="Models\PhotoGallery.cs" />
     <Compile Include="Models\PhotoGalleryDigitalAsset.cs" />
     <Compile Include="Models\ProfessionalService.cs" />
@@ -269,6 +270,12 @@
     <Compile Include="ContentModels\IGalleryPageContentModel.cs" />
     <Compile Include="ContentModels\IWhatsNewPageContentModel.cs" />
     <Compile Include="ContentModels\IAboutPageContentModel.cs" />
+    <Compile Include="Dtos\HtmlContentDto.cs" />
+    <Compile Include="Dtos\HtmlContentAddOrUpdateRequestDto.cs" />
+    <Compile Include="Dtos\HtmlContentAddOrUpdateResponseDto.cs" />
+    <Compile Include="Services\HtmlContentService.cs" />
+    <Compile Include="Services\IHtmlContentService.cs" />
+    <Compile Include="Controllers\HtmlContentController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

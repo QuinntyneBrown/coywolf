@@ -3,18 +3,22 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { NavComponent } from './nav';
+import { NavComponent } from './nav.component';
 import { LoginComponent } from "./login.component";
 import { SideNavComponent } from './admin';
-import { WysiwygComponent } from "./wysiwyg";
-import { ProfessionalServiceEditorComponent } from "./professional-service";
+import { WysiwygComponent } from "./wysiwyg.component";
+import { ProfessionalServiceEditorComponent } from "./admin";
 import { PhotoGridComponent } from "./photo-grid.component";
+import { PageHeaderComponent } from "./page-header.component";
+import { OneColumnLayoutComponent } from "./one-column-layout.component";
 
 const declarables = [
     LoginComponent,
     NavComponent,
     SideNavComponent,
     WysiwygComponent,
+    PageHeaderComponent,
+    OneColumnLayoutComponent,
 
     PhotoGridComponent,
 

@@ -25,6 +25,7 @@ namespace Coywolf
             container.RegisterType<IDigitalAssetService, DigitalAssetService>();
             container.RegisterType<IPhotoGalleryService, PhotoGalleryService>();            
             container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IHtmlContentService, HtmlContentService>();
 
             container.RegisterType<IAppShellContentModel, AppShellContentModel>();
             container.RegisterType<IHomePageContentModel, HomePageContentModel>();

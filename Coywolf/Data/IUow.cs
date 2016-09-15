@@ -8,6 +8,9 @@ namespace Coywolf.Data
         IRepository<DigitalAsset> DigitalAssets { get; }
         IRepository<PhotoGallery> PhotoGalleries { get; }
         IRepository<User> Users { get; }
+        IRepository<Role> Roles { get; }
+        IRepository<HtmlContent> HtmlContents { get; }
+
         void SaveChanges();
     }
 }

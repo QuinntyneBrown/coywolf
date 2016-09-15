@@ -1,6 +1,8 @@
 using Coywolf.Data;
 using Coywolf.Services;
 using Microsoft.Practices.Unity;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Coywolf.ContentModels
 {    
@@ -8,24 +10,23 @@ namespace Coywolf.ContentModels
     {
         [InjectionConstructor]
         public AboutPageContentModel(IUow uow, ICacheProvider cacheProvider)
-        :this(uow,cacheProvider.GetCache()){}
+        :this(cacheProvider.GetCache()){}
 
-        public AboutPageContentModel(IUow uow, ICache cache)
+        public AboutPageContentModel(ICache cache)
         {
             _cache = cache;
-            _uow = uow;
         }
 
         public IAboutPageContentModel Get()
         {
-            var contentModel = new AboutPageContentModel(_uow, _cache);
+            var contentModel = new AboutPageContentModel(_cache);
             
             return contentModel;
         }
 		
+		[JsonConverter(typeof(StringEnumConverter))]
 		public ContentModelType ContentModelType { get; set; } = ContentModelType.AboutPage;
 
-        protected readonly IUow _uow;
         protected readonly ICache _cache;
     }
 }

@@ -210,17 +210,59 @@
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\admin\side-nav\side-nav.component.html">
-      <DependentUpon>side-nav.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\components\admin\side-nav\side-nav.component.scss">
-      <DependentUpon>side-nav.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\components\digital-asset\digital-asset-list.component.html">
+    <Content Include="src\app\components\admin\digital-asset-list.component.html">
       <DependentUpon>digital-asset-list.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\digital-asset\digital-asset-list.component.scss">
+    <Content Include="src\app\components\admin\digital-asset-list.component.scss">
       <DependentUpon>digital-asset-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\digital-asset-upload.component.html">
+      <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\digital-asset-upload.component.scss">
+      <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\html-content-editor.component.html">
+      <DependentUpon>html-content-editor.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\html-content-editor.component.scss">
+      <DependentUpon>html-content-editor.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\html-content-list.component.html">
+      <DependentUpon>html-content-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\html-content-list.component.scss">
+      <DependentUpon>html-content-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\photo-gallery-editor.component.html">
+      <DependentUpon>photo-gallery-editor.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\photo-gallery-editor.component.scss">
+      <DependentUpon>photo-gallery-editor.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\photo-gallery-list.component.html">
+      <DependentUpon>photo-gallery-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\photo-gallery-list.component.scss">
+      <DependentUpon>photo-gallery-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\professional-service-editor.component.html">
+      <DependentUpon>professional-service-editor.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\professional-service-editor.component.scss">
+      <DependentUpon>professional-service-editor.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\professional-service-list.component.html">
+      <DependentUpon>professional-service-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\professional-service-list.component.scss">
+      <DependentUpon>professional-service-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\side-nav.component.html">
+      <DependentUpon>side-nav.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\side-nav.component.scss">
+      <DependentUpon>side-nav.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\components\login.component.html">
       <DependentUpon>login.component.ts</DependentUpon>
@@ -228,11 +270,29 @@
     <Content Include="src\app\components\login.component.scss">
       <DependentUpon>login.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\nav\nav.component.html">
+    <Content Include="src\app\components\nav.component.html">
       <DependentUpon>nav.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\nav\nav.component.scss">
+    <Content Include="src\app\components\nav.component.scss">
       <DependentUpon>nav.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\one-column-layout.component.html">
+      <DependentUpon>one-column-layout.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\one-column-layout.component.scss">
+      <DependentUpon>one-column-layout.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\page-footer.component.html">
+      <DependentUpon>page-footer.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\page-footer.component.scss">
+      <DependentUpon>page-footer.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\page-header.component.html">
+      <DependentUpon>page-header.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\page-header.component.scss">
+      <DependentUpon>page-header.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\components\photo-grid.component.html">
       <DependentUpon>photo-grid.component.ts</DependentUpon>
@@ -240,17 +300,16 @@
     <Content Include="src\app\components\photo-grid.component.scss">
       <DependentUpon>photo-grid.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\professional-service\professional-service-editor\professional-service-editor.component.html" />
-    <Content Include="src\app\components\wysiwyg\wysiwyg.component.html">
+    <Content Include="src\app\components\wysiwyg.component.html">
       <DependentUpon>wysiwyg.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\wysiwyg\wysiwyg.component.scss">
+    <Content Include="src\app\components\wysiwyg.component.scss">
       <DependentUpon>wysiwyg.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\about\about-page.component.html">
+    <Content Include="src\app\pages\about-page.component.html">
       <DependentUpon>about-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\about\about-page.component.scss">
+    <Content Include="src\app\pages\about-page.component.scss">
       <DependentUpon>about-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\pages\admin\admin.component.html">
@@ -301,40 +360,40 @@
     <Content Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.scss">
       <DependentUpon>professional-service-list-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\contact\contact-page.component.html">
+    <Content Include="src\app\pages\contact-page.component.html">
       <DependentUpon>contact-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\contact\contact-page.component.scss">
+    <Content Include="src\app\pages\contact-page.component.scss">
       <DependentUpon>contact-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\gallery\gallery-page.component.html">
+    <Content Include="src\app\pages\gallery-page.component.html">
       <DependentUpon>gallery-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\gallery\gallery-page.component.scss">
+    <Content Include="src\app\pages\gallery-page.component.scss">
       <DependentUpon>gallery-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\home\home-page.component.html">
+    <Content Include="src\app\pages\home-page.component.html">
       <DependentUpon>home-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\home\home-page.component.scss">
+    <Content Include="src\app\pages\home-page.component.scss">
       <DependentUpon>home-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\not-found\not-found-page.component.html">
+    <Content Include="src\app\pages\not-found-page.component.html">
       <DependentUpon>not-found-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\not-found\not-found-page.component.scss">
+    <Content Include="src\app\pages\not-found-page.component.scss">
       <DependentUpon>not-found-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\services\services-page.component.html">
+    <Content Include="src\app\pages\services-page.component.html">
       <DependentUpon>services-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\services\services-page.component.scss">
+    <Content Include="src\app\pages\services-page.component.scss">
       <DependentUpon>services-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\whats-new\whats-new-page.component.html">
+    <Content Include="src\app\pages\whats-new-page.component.html">
       <DependentUpon>whats-new-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\whats-new\whats-new-page.component.scss">
+    <Content Include="src\app\pages\whats-new-page.component.scss">
       <DependentUpon>whats-new-page.component.ts</DependentUpon>
     </Content>
     <Content Include="webpack.config.js" />
@@ -348,7 +407,6 @@
     <Content Include="src\assets\_varibles.scss" />
     <None Include="Properties\PublishProfiles\coywolf - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\coywolf - Web Deploy.pubxml" />
-    <Content Include="src\app\components\professional-service\professional-service-editor\professional-service-editor.component.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -382,7 +440,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56622</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
@@ -415,17 +473,11 @@
     <TypeScriptCompile Include="src\app\actions\authentication.actions.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\content-models\content-model-type.ts" />
-    <TypeScriptCompile Include="src\app\models\view-model-type.ts" />
-    <TypeScriptCompile Include="src\app\pages\models.d.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\admin-components.module.ts" />
+    <TypeScriptCompile Include="src\app\components\nav.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\index.ts" />
-    <TypeScriptCompile Include="src\app\components\admin\side-nav\index.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
-    <TypeScriptCompile Include="src\app\components\nav\index.ts" />
-    <TypeScriptCompile Include="src\app\components\professional-service\index.ts" />
-    <TypeScriptCompile Include="src\app\components\professional-service\professional-service-editor\index.ts" />
-    <TypeScriptCompile Include="src\app\components\professional-service\professional-service-editor\professional-service-editor.component.ts" />
-    <TypeScriptCompile Include="src\app\components\wysiwyg\index.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\professional-service-editor.component.ts" />
     <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
     <TypeScriptCompile Include="src\app\configuration\index.ts" />
     <TypeScriptCompile Include="src\app\constants\get-current-user-success.ts" />
@@ -439,7 +491,6 @@
     <TypeScriptCompile Include="src\app\models\digital-asset.model.ts" />
     <TypeScriptCompile Include="src\app\models\photo-gallery.model.ts" />
     <TypeScriptCompile Include="src\app\models\professional-service.model.ts" />
-    <TypeScriptCompile Include="src\app\pages\about\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\digital-asset\digital-asset-list\digital-asset-list-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\digital-asset\digital-asset-list\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\digital-asset\index.ts" />
@@ -458,13 +509,7 @@
     <TypeScriptCompile Include="src\app\pages\admin\professional-service\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\professional-service\professional-service-list\index.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\professional-service\professional-service-list\professional-service-list-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\contact\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\gallery\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\home\index.ts" />
     <TypeScriptCompile Include="src\app\pages\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\not-found\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\services\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\whats-new\index.ts" />
     <TypeScriptCompile Include="src\app\pipes\index.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
     <TypeScriptCompile Include="src\app\routing\providers\authentication.guard.ts" />
@@ -510,14 +555,13 @@
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
-    <TypeScriptCompile Include="src\app\pages\home\home-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\gallery\gallery-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\whats-new\whats-new-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\services\services-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\about\about-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\contact\contact-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\not-found\not-found-page.component.ts" />
-    <TypeScriptCompile Include="src\app\components\nav\nav.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\home-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\gallery-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\whats-new-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\services-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\about-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\contact-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\not-found-page.component.ts" />
     <TypeScriptCompile Include="src\app\constants\add-photo-gallery-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\get-photo-gallery-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\remove-photo-gallery-success.action.ts" />
@@ -531,8 +575,8 @@
     <TypeScriptCompile Include="src\app\actions\professional-service.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\photo-gallery.actions.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\admin.component.ts" />
-    <TypeScriptCompile Include="src\app\components\admin\side-nav\side-nav.component.ts" />
-    <TypeScriptCompile Include="src\app\components\wysiwyg\wysiwyg.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\side-nav.component.ts" />
+    <TypeScriptCompile Include="src\app\components\wysiwyg.component.ts" />
     <TypeScriptCompile Include="src\app\components\photo-grid.component.ts" />
     <TypeScriptCompile Include="src\app\actions\view-model.actions.ts" />
     <TypeScriptCompile Include="src\app\constants\get-view-model-success.action.ts" />
@@ -540,8 +584,6 @@
     <TypeScriptCompile Include="src\app\models\index.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
-    <TypeScriptCompile Include="src\app\components\digital-asset\digital-asset-list.component.ts" />
-    <TypeScriptCompile Include="src\app\components\digital-asset\index.ts" />
     <TypeScriptCompile Include="src\app\services\index.ts" />
     <TypeScriptCompile Include="src\app\helpers\helpers.module.ts" />
     <TypeScriptCompile Include="src\app\components\login.component.ts" />
@@ -558,6 +600,16 @@
     <TypeScriptCompile Include="src\app\content-models\whats-new-page-content.model.ts" />
     <TypeScriptCompile Include="src\app\content-models\services-page-content.model.ts" />
     <TypeScriptCompile Include="src\app\content-models\home-page-content.model.ts" />
+    <TypeScriptCompile Include="src\app\components\page-header.component.ts" />
+    <TypeScriptCompile Include="src\app\components\one-column-layout.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\professional-service-list.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\photo-gallery-list.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\photo-gallery-editor.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\digital-asset-list.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\digital-asset-upload.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\html-content-list.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\html-content-editor.component.ts" />
+    <TypeScriptCompile Include="src\app\components\page-footer.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

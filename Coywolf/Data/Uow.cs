@@ -29,6 +29,8 @@ namespace Coywolf.Data
         public IRepository<Models.DigitalAsset> DigitalAssets { get { return GetStandardRepo<Models.DigitalAsset>(); } }
         public IRepository<Models.PhotoGallery> PhotoGalleries { get { return GetStandardRepo<Models.PhotoGallery>(); } }
         public IRepository<Models.User> Users { get { return GetStandardRepo<Models.User>(); } }
+        public IRepository<Models.Role> Roles {  get { return GetStandardRepo<Models.Role>(); } }
+        public IRepository<Models.HtmlContent> HtmlContents { get { return GetStandardRepo<Models.HtmlContent>(); } }
 
         protected void ConfigureDbContext(IDbContext dbContext)
         {

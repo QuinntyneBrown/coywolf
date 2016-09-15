@@ -17,6 +17,7 @@ namespace Coywolf.Data
         public DbSet<DigitalAsset> DigitalAssets { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<PhotoGallery> PhotoGalleries { get; set; }
+        public DbSet<HtmlContent> HtmlContents { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
