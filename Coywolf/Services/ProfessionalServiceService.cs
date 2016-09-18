@@ -21,6 +21,7 @@ namespace Coywolf.Services
                 .FirstOrDefault(x => x.Id == request.Id && x.IsDeleted == false);
             if (entity == null) _repository.Add(entity = new Models.ProfessionalService());
             entity.Name = request.Name;
+            entity.Description = request.Description;
             _uow.SaveChanges();
             return new ProfessionalServiceAddOrUpdateResponseDto(entity);
         }

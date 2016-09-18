@@ -6,7 +6,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavComponent } from './nav.component';
 import { LoginComponent } from "./login.component";
 import { SideNavComponent } from './admin';
-import { WysiwygComponent } from "./wysiwyg.component";
+import { HtmlTextareaComponent } from "./html-textarea.component";
 import {
     ProfessionalServiceEditFormComponent,
     ProfessionalServiceListComponent,
@@ -23,12 +23,12 @@ const declarables = [
     LoginComponent,
     NavComponent,
     SideNavComponent,
-    WysiwygComponent,
+    HtmlTextareaComponent,
     PageHeaderComponent,
     OneColumnLayoutComponent,
     DigitalAssetUploadComponent,
     PhotoGridComponent,
-
+    
     ProfessionalServiceEditFormComponent,
     ProfessionalServiceListComponent,
 

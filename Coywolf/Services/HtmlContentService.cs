@@ -23,6 +23,7 @@ namespace Coywolf.Services
                 .FirstOrDefault(x => x.Id == request.Id && x.IsDeleted == false);
             if (entity == null) _repository.Add(entity = new HtmlContent());
             entity.Name = request.Name;
+            entity.HtmlBody = request.HtmlBody;
             _uow.SaveChanges();
             return new HtmlContentAddOrUpdateResponseDto(entity);
         }

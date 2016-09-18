@@ -6,6 +6,7 @@ namespace Coywolf.Dtos
         {
             this.Id = entity.Id;
             this.Name = entity.Name;
+            this.HtmlBody = entity.HtmlBody;
         }
 
         public HtmlContentDto()
@@ -15,5 +16,6 @@ namespace Coywolf.Dtos
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public string HtmlBody { get; set; }
     }
 }

@@ -92,9 +92,7 @@ export const adminRoutes: Routes = [
             {
                 path: 'professionalService',
                 component: ProfessionalServiceEditPageComponent
-            },
-
-
+            },            
             {
                 path: 'htmlContents',
                 component: HtmlContentListPageComponent

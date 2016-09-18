@@ -214,6 +214,12 @@
     <Content Include="src\app\components\admin\digital-asset-list.component.scss">
       <DependentUpon>digital-asset-list.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\admin\html-content-edit-form.component.html">
+      <DependentUpon>html-content-edit-form.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\admin\html-content-edit-form.component.scss">
+      <DependentUpon>html-content-edit-form.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\components\admin\html-content-list.component.html">
       <DependentUpon>html-content-list.component.ts</DependentUpon>
     </Content>
@@ -256,6 +262,12 @@
     <Content Include="src\app\components\digital-asset-upload.component.scss">
       <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\html-textarea.component.html">
+      <DependentUpon>html-textarea.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\html-textarea.component.scss">
+      <DependentUpon>html-textarea.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\components\login.component.html">
       <DependentUpon>login.component.ts</DependentUpon>
     </Content>
@@ -292,12 +304,6 @@
     <Content Include="src\app\components\photo-grid.component.scss">
       <DependentUpon>photo-grid.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\wysiwyg.component.html">
-      <DependentUpon>wysiwyg.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\components\wysiwyg.component.scss">
-      <DependentUpon>wysiwyg.component.ts</DependentUpon>
-    </Content>
     <Content Include="src\app\pages\about-page.component.html">
       <DependentUpon>about-page.component.ts</DependentUpon>
     </Content>
@@ -321,6 +327,12 @@
     </Content>
     <Content Include="src\app\pages\admin\digital-asset-upload-page.component.scss">
       <DependentUpon>digital-asset-upload-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\html-content-list-page.component.html">
+      <DependentUpon>html-content-list-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\html-content-list-page.component.scss">
+      <DependentUpon>html-content-list-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\pages\admin\photo-gallery-edit-page.component.html">
       <DependentUpon>photo-gallery-edit-page.component.ts</DependentUpon>
@@ -405,12 +417,8 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="src\app\pages\admin\html-content-list-page.component.scss" />
-    <Content Include="src\app\pages\admin\html-content-list-page.component.html" />
     <Content Include="src\app\pages\admin\html-content-edit-page.component.scss" />
     <Content Include="src\app\pages\admin\html-content-edit-page.component.html" />
-    <Content Include="src\app\components\admin\html-content-edit-form.component.scss" />
-    <Content Include="src\app\components\admin\html-content-edit-form.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -547,7 +555,6 @@
     <TypeScriptCompile Include="src\app\actions\photo-gallery.actions.ts" />
     <TypeScriptCompile Include="src\app\pages\admin\admin.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\side-nav.component.ts" />
-    <TypeScriptCompile Include="src\app\components\wysiwyg.component.ts" />
     <TypeScriptCompile Include="src\app\components\photo-grid.component.ts" />
     <TypeScriptCompile Include="src\app\models\index.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
@@ -599,6 +606,8 @@
     <TypeScriptCompile Include="src\app\pages\admin\html-content-edit-page.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\html-content-edit-form.component.ts" />
     <TypeScriptCompile Include="src\app\store\html-content.reducer.ts" />
+    <TypeScriptCompile Include="src\app\services\local-storage.service.ts" />
+    <TypeScriptCompile Include="src\app\components\html-textarea.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

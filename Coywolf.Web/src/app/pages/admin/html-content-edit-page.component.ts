@@ -16,7 +16,9 @@ export class HtmlContentEditPageComponent {
     ) { }
 
     ngOnInit() {
-        this._htmlContentActions.getById({ id: this._activatedRoute.snapshot.params["id"] });
+        if (this._activatedRoute.snapshot.params["id"]) {
+            this._htmlContentActions.getById({ id: this._activatedRoute.snapshot.params["id"] });
+        }
     }
 
     public get entity$() {
@@ -26,7 +28,8 @@ export class HtmlContentEditPageComponent {
     public onSubmit($event: any) {
         this._htmlContentActions.add({
             id: $event.value.id,
-            name: $event.value.name
+            name: $event.value.name,
+            htmlBody: $event.value.htmlBody
         });
 
         setTimeout(() => { this._router.navigate(["/admin/htmlContents"]); }, 0);

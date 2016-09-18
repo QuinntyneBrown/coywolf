@@ -1,14 +1,18 @@
 <section class="html-content-edit-form">
-    <h1>Edit HtmlContent</h1>
+    <h1>Edit Html Content</h1>
     <form novalidate [formGroup]="form">
         <input placeholder="Name" formControlName="name" id="name" />
         <span *ngIf="form.get('name').touched && form.hasError('required', 'name')">
             required
         </span>
-        <button type="submit"
-                (click)="onSubmit.emit({ value: this.form.value })"
-                [disabled]="form.invalid">
-            Submit
-        </button>
     </form>
+
+    <html-textarea [(ngModel)]="htmlBody"></html-textarea>
+
+    <button type="submit"
+            (click)="tryToSubmit()"
+            [disabled]="form.invalid">
+        Submit
+    </button>
+
 </section>

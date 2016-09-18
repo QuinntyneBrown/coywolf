@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, Output, AfterViewInit, EventEmitter, Renderer, ElementRef } from "@angular/core";
+import { Component, ChangeDetectionStrategy, Input, Output, OnInit, AfterViewInit, EventEmitter, Renderer, ElementRef } from "@angular/core";
 
 import {
     FormGroup,
@@ -13,12 +13,19 @@ import { ProfessionalService } from "../../models";
     styles: [require("./professional-service-edit-form.component.scss")],
     selector: "professional-service-edit-form",
 })
-export class ProfessionalServiceEditFormComponent implements AfterViewInit  { 
+export class ProfessionalServiceEditFormComponent implements AfterViewInit, OnInit  { 
 
     constructor(private _renderer: Renderer, private _elementRef: ElementRef) { } 
 
+    public description: string;
+
     public get name(): HTMLElement {
         return this._elementRef.nativeElement.querySelector("#name");
+    }
+
+    ngOnInit() {
+        if (this.professionalService && this.professionalService.id)
+            this.description = this.professionalService.description;
     }
 
     ngAfterViewInit() {
@@ -38,4 +45,10 @@ export class ProfessionalServiceEditFormComponent implements AfterViewInit  {
             Validators.required
         ])
     });
+
+    public tryToSubmit() {
+        this.onSubmit.emit({
+            value: Object.assign({}, this.form.value, { description: this.description })
+        });
+    }
 }

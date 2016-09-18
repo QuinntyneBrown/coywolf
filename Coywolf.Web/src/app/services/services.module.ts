@@ -8,12 +8,15 @@ import { PhotoGalleryService } from "./photo-gallery.service";
 import { ProfessionalServiceService } from "./professional-service.service";
 import { HtmlContentService } from "./html-content.service";
 
+import { LocalStorageService } from "./local-storage.service";
+
 const providers = [
     AuthenticationService,
     DigitalAssetService,
     PhotoGalleryService,
     ProfessionalServiceService,
-    HtmlContentService
+    HtmlContentService,
+    LocalStorageService
 ];
 
 @NgModule({
