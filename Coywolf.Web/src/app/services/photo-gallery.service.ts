@@ -3,6 +3,7 @@ import { Http } from "@angular/http";
 import { PhotoGallery } from "../models";
 import { Observable } from "rxjs";
 import { extractData } from "../utilities";
+import { OAuthHelper } from "../helpers";
 
 import { apiCofiguration } from "../configuration";
 

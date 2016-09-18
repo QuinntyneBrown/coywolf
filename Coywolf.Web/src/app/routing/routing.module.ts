@@ -27,6 +27,9 @@ import {
     PhotoGalleryEditPageComponent,
     PhotoGalleryListPageComponent,
 
+    HtmlContentEditPageComponent,
+    HtmlContentListPageComponent,
+
     LoginPageComponent
     
 } from "../pages";
@@ -90,6 +93,21 @@ export const adminRoutes: Routes = [
                 path: 'professionalService',
                 component: ProfessionalServiceEditPageComponent
             },
+
+
+            {
+                path: 'htmlContents',
+                component: HtmlContentListPageComponent
+            },
+            {
+                path: 'htmlContent/:id',
+                component: HtmlContentEditPageComponent
+            },
+            {
+                path: 'htmlContent',
+                component: HtmlContentEditPageComponent
+            },
+
             {
                 path: 'professionalService/:serviceid/digitalasset/upload',
                 component: DigitalAssetUploadPageComponent
@@ -142,6 +160,9 @@ export const routedComponents = [
     DigitalAssetListPageComponent,
 
     PhotoGalleryListPageComponent,
-    PhotoGalleryEditPageComponent
+    PhotoGalleryEditPageComponent,
+
+    HtmlContentEditPageComponent,
+    HtmlContentListPageComponent
 ];
 

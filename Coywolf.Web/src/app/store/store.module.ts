@@ -10,6 +10,8 @@ import {
     tokenReducer
 } from "./reducers";
 
+import { htmlContentsReducer } from "./html-content.reducer";
+
 import { AppStore } from "./app-store";
 import { initialState } from "./initial-state";
 
@@ -24,6 +26,7 @@ const providers = [
                 digitalAssets: digitalAssetsReducer,
                 photoGalleries: photoGallerysReducer,
                 professionalServices: professionalServicesReducer,
+                htmlContents: htmlContentsReducer,
                 currentUser: currentUserReducer,
                 token: tokenReducer
             },

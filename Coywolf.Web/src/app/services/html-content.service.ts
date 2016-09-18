@@ -3,17 +3,18 @@ import { Http } from "@angular/http";
 import { HtmlContent } from "../models";
 import { Observable } from "rxjs";
 import { extractData } from "../utilities";
+import { OAuthHelper } from "../helpers";
 
 import { apiCofiguration } from "../configuration";
 
 
 @Injectable()
 export class HtmlContentService {
-    constructor(private _http: Http) { }
+    constructor(private _http: Http, private _oauthHelper: OAuthHelper) { }
 
     public add(entity: HtmlContent) {
         return this._http
-            .post(`${apiCofiguration.baseUrl}/api/htmlcontent/add`, entity)
+            .post(`${apiCofiguration.baseUrl}/api/htmlcontent/add`, entity, { headers: this._oauthHelper.getOAuthHeaders()})
             .map(data => data.json())
             .catch(err => {
                 return Observable.of(false);
@@ -40,7 +41,7 @@ export class HtmlContentService {
 
     public remove(options: { id: number }) {
         return this._http
-            .delete(`${apiCofiguration.baseUrl}/api/htmlcontent/remove?id=${options.id}`)
+            .delete(`${apiCofiguration.baseUrl}/api/htmlcontent/remove?id=${options.id}`, { headers: this._oauthHelper.getOAuthHeaders() })
             .map(data => data.json())
             .catch(err => {
                 return Observable.of(false);

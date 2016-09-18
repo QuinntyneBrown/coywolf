@@ -1,0 +1,8 @@
+<div class="html-content-list-page">
+    <one-column-layout>
+		<a [routerLink]="['/admin/htmlContent']" href="">CREATE HTML CONTENT</a>
+        <html-content-list [entities]="_store.htmlContents$() | async"
+                   (onDelete)="_htmlContentActions.remove({ id: $event.value.id })"
+                   (onEdit)="_router.navigate(['admin','htmlcontent', $event.value.id])"></html-content-list>
+    </one-column-layout>    
+</div>

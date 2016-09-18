@@ -14,7 +14,7 @@ export class HtmlContentActions {
     public add(htmlContent: HtmlContent) {
         const newGuid = guid();
         this._htmlContentService.add(htmlContent)
-            .subscribe(book => {
+            .subscribe(htmlContent => {
                 this._store.dispatch({
                     type: HTML_CONTENT_ADD_SUCCESS,
                     payload: htmlContent

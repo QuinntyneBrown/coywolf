@@ -4,7 +4,7 @@ import { AppState } from "./app-state";
 import { guid, pluck } from "../utilities";
 import { select, SelectSignature } from '@ngrx/core/operator/select';
 import { Observable, BehaviorSubject } from "rxjs";
-import { PhotoGallery, ProfessionalService, DigitalAsset } from "../models";
+import { PhotoGallery, ProfessionalService, DigitalAsset, HtmlContent, Content } from "../models";
 
 
 @Injectable()
@@ -75,6 +75,20 @@ export class AppStore {
         return this._store.select("professionalServices")
             .map((data: { professionalServices: Array<ProfessionalService> }) => {
                 return data.professionalServices;
+            });
+    }
+
+    public htmlContentById$(id: string): Observable<HtmlContent> {
+        return this._store.select("htmlContents")
+            .map((data: { htmlContents: Array<HtmlContent> }) => {
+                return pluck({ value: id, items: data.htmlContents }) as HtmlContent;
+            })
+    }
+
+    public htmlContents$(): Observable<Array<HtmlContent>> {
+        return this._store.select("htmlContents")
+            .map((data: { htmlContents: Array<HtmlContent> }) => {
+                return data.htmlContents;
             });
     }
 

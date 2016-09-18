@@ -1,6 +1,6 @@
 export * from "./admin-components.module";
 export * from "./digital-asset-list.component";
-export * from "./html-content-editor.component";
+export * from "./html-content-edit-form.component";
 export * from "./html-content-list.component";
 export * from "./photo-gallery-editor.component";
 export * from "./photo-gallery-list.component";

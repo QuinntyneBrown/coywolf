@@ -214,12 +214,6 @@
     <Content Include="src\app\components\admin\digital-asset-list.component.scss">
       <DependentUpon>digital-asset-list.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\admin\html-content-editor.component.html">
-      <DependentUpon>html-content-editor.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\components\admin\html-content-editor.component.scss">
-      <DependentUpon>html-content-editor.component.ts</DependentUpon>
-    </Content>
     <Content Include="src\app\components\admin\html-content-list.component.html">
       <DependentUpon>html-content-list.component.ts</DependentUpon>
     </Content>
@@ -411,6 +405,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="src\app\pages\admin\html-content-list-page.component.scss" />
+    <Content Include="src\app\pages\admin\html-content-list-page.component.html" />
+    <Content Include="src\app\pages\admin\html-content-edit-page.component.scss" />
+    <Content Include="src\app\pages\admin\html-content-edit-page.component.html" />
+    <Content Include="src\app\components\admin\html-content-edit-form.component.scss" />
+    <Content Include="src\app\components\admin\html-content-edit-form.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -572,7 +572,6 @@
     <TypeScriptCompile Include="src\app\components\admin\photo-gallery-editor.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\digital-asset-list.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\html-content-list.component.ts" />
-    <TypeScriptCompile Include="src\app\components\admin\html-content-editor.component.ts" />
     <TypeScriptCompile Include="src\app\components\page-footer.component.ts" />
     <TypeScriptCompile Include="src\app\models\html-content.model.ts" />
     <TypeScriptCompile Include="src\app\constants\professional-service-add-success.action.ts" />
@@ -596,6 +595,10 @@
     <TypeScriptCompile Include="src\app\services\html-content.service.ts" />
     <TypeScriptCompile Include="src\app\components\digital-asset-upload.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\professional-service-edit-form.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\html-content-list-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\admin\html-content-edit-page.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\html-content-edit-form.component.ts" />
+    <TypeScriptCompile Include="src\app\store\html-content.reducer.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

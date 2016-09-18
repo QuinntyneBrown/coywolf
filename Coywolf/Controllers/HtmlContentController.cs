@@ -32,6 +32,7 @@ namespace Coywolf.Controllers
         public IHttpActionResult Get() { return Ok(_htmlContentService.Get()); }
 
         [Route("getById")]
+        [AllowAnonymous]
         [HttpGet]
         [ResponseType(typeof(HtmlContentDto))]
         public IHttpActionResult GetById(int id) { return Ok(_htmlContentService.GetById(id)); }

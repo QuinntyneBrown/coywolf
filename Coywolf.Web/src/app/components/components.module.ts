@@ -9,7 +9,9 @@ import { SideNavComponent } from './admin';
 import { WysiwygComponent } from "./wysiwyg.component";
 import {
     ProfessionalServiceEditFormComponent,
-    ProfessionalServiceListComponent
+    ProfessionalServiceListComponent,
+    HtmlContentEditFormComponent,
+    HtmlContentListComponent
 
 } from "./admin";
 import { PhotoGridComponent } from "./photo-grid.component";
@@ -28,7 +30,10 @@ const declarables = [
     PhotoGridComponent,
 
     ProfessionalServiceEditFormComponent,
-    ProfessionalServiceListComponent
+    ProfessionalServiceListComponent,
+
+    HtmlContentEditFormComponent,
+    HtmlContentListComponent
 ];
 
 export const providers = [];
