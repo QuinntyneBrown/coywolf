@@ -6,6 +6,5 @@ namespace Coywolf.Services
     public interface IUserService
     {
         UserDto Current(string username);
-
     }
 }

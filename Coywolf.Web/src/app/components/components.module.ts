@@ -11,6 +11,7 @@ import { ProfessionalServiceEditorComponent } from "./admin";
 import { PhotoGridComponent } from "./photo-grid.component";
 import { PageHeaderComponent } from "./page-header.component";
 import { OneColumnLayoutComponent } from "./one-column-layout.component";
+import { DigitalAssetUploadComponent } from "./digital-asset-upload.component";
 
 const declarables = [
     LoginComponent,
@@ -19,7 +20,7 @@ const declarables = [
     WysiwygComponent,
     PageHeaderComponent,
     OneColumnLayoutComponent,
-
+    DigitalAssetUploadComponent,
     PhotoGridComponent,
 
     ProfessionalServiceEditorComponent

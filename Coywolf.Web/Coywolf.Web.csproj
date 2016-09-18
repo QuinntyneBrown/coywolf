@@ -262,6 +262,12 @@
     <Content Include="src\app\components\admin\side-nav.component.scss">
       <DependentUpon>side-nav.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\digital-asset-upload.component.html">
+      <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\digital-asset-upload.component.scss">
+      <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\components\login.component.html">
       <DependentUpon>login.component.ts</DependentUpon>
     </Content>
@@ -596,6 +602,7 @@
     <TypeScriptCompile Include="src\app\store\reducers\html-content.reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\content.reducer.ts" />
     <TypeScriptCompile Include="src\app\services\html-content.service.ts" />
+    <TypeScriptCompile Include="src\app\components\digital-asset-upload.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
