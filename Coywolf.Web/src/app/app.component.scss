@@ -1,5 +1,9 @@
 @import "../assets/index";
 
+body,html {
+    color:$font-color;
+}
+
 page-header {
     display:block;
     width:1280px;
@@ -8,4 +12,12 @@ page-header {
 
 .main-content {
     width:100%;
+}
+
+
+a,
+a:link,
+a:visited {
+    color:$font-color;
+    text-decoration:none;
 }

@@ -1,3 +1,8 @@
 <div class="professional-service-list-page">
-    <h1>Services</h1>
+    <one-column-layout>
+        <a [routerLink]="['/admin/professionalService']" href="">CREATE PROFESSIONAL SERVICE</a>
+        <professional-service-list [entities]="_store.professionalServices$() | async"
+                   (onDelete)="_professionalServiceActions.remove({ id: $event.value.id })"
+                   (onEdit)="_router.navigate(['/admin/professionalService', $event.value.id])"></professional-service-list>
+    </one-column-layout>    
 </div>

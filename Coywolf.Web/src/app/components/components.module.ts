@@ -7,7 +7,11 @@ import { NavComponent } from './nav.component';
 import { LoginComponent } from "./login.component";
 import { SideNavComponent } from './admin';
 import { WysiwygComponent } from "./wysiwyg.component";
-import { ProfessionalServiceEditorComponent } from "./admin";
+import {
+    ProfessionalServiceEditFormComponent,
+    ProfessionalServiceListComponent
+
+} from "./admin";
 import { PhotoGridComponent } from "./photo-grid.component";
 import { PageHeaderComponent } from "./page-header.component";
 import { OneColumnLayoutComponent } from "./one-column-layout.component";
@@ -23,7 +27,8 @@ const declarables = [
     DigitalAssetUploadComponent,
     PhotoGridComponent,
 
-    ProfessionalServiceEditorComponent
+    ProfessionalServiceEditFormComponent,
+    ProfessionalServiceListComponent
 ];
 
 export const providers = [];

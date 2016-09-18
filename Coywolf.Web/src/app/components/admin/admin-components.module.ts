@@ -7,7 +7,7 @@ const declarables = [
 
 ];
 
-export const providers = [];
+const providers = [];
 
 @NgModule({
     imports: [CommonModule, RouterModule, ReactiveFormsModule, FormsModule],

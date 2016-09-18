@@ -2,7 +2,7 @@
 
 export interface AppState {
     photoGalleries: Array<PhotoGallery>;
-    professionalServices: Array<PhotoGallery>;
+    professionalServices: Array<ProfessionalService>;
     digitalAssets: Array<DigitalAsset>;
     contents: Array<Content>;
     htmlContents: Array<HtmlContent>;

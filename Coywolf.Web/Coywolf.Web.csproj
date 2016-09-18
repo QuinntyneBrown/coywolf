@@ -214,12 +214,6 @@
     <Content Include="src\app\components\admin\digital-asset-list.component.scss">
       <DependentUpon>digital-asset-list.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\admin\digital-asset-upload.component.html">
-      <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
-    </Content>
-    <Content Include="src\app\components\admin\digital-asset-upload.component.scss">
-      <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
-    </Content>
     <Content Include="src\app\components\admin\html-content-editor.component.html">
       <DependentUpon>html-content-editor.component.ts</DependentUpon>
     </Content>
@@ -244,11 +238,11 @@
     <Content Include="src\app\components\admin\photo-gallery-list.component.scss">
       <DependentUpon>photo-gallery-list.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\admin\professional-service-editor.component.html">
-      <DependentUpon>professional-service-editor.component.ts</DependentUpon>
+    <Content Include="src\app\components\admin\professional-service-edit-form.component.html">
+      <DependentUpon>professional-service-edit-form.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\admin\professional-service-editor.component.scss">
-      <DependentUpon>professional-service-editor.component.ts</DependentUpon>
+    <Content Include="src\app\components\admin\professional-service-edit-form.component.scss">
+      <DependentUpon>professional-service-edit-form.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\components\admin\professional-service-list.component.html">
       <DependentUpon>professional-service-list.component.ts</DependentUpon>
@@ -480,7 +474,6 @@
     <TypeScriptCompile Include="src\app\components\nav.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\index.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
-    <TypeScriptCompile Include="src\app\components\admin\professional-service-editor.component.ts" />
     <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
     <TypeScriptCompile Include="src\app\configuration\index.ts" />
     <TypeScriptCompile Include="src\app\constants\get-current-user-success.ts" />
@@ -578,7 +571,6 @@
     <TypeScriptCompile Include="src\app\components\admin\photo-gallery-list.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\photo-gallery-editor.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\digital-asset-list.component.ts" />
-    <TypeScriptCompile Include="src\app\components\admin\digital-asset-upload.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\html-content-list.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\html-content-editor.component.ts" />
     <TypeScriptCompile Include="src\app\components\page-footer.component.ts" />
@@ -603,6 +595,7 @@
     <TypeScriptCompile Include="src\app\store\reducers\content.reducer.ts" />
     <TypeScriptCompile Include="src\app\services\html-content.service.ts" />
     <TypeScriptCompile Include="src\app\components\digital-asset-upload.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\professional-service-edit-form.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

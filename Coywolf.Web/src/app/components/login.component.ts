@@ -16,6 +16,8 @@ export class LoginComponent implements AfterViewInit {
 
     ngAfterViewInit() {
         this._renderer.invokeElementMethod(this.username, 'focus', []);
+        this.form.patchValue({ "username": "admin" });
+        this.form.patchValue({ "password": "password" });
     }
 
     @Output() public tryToLogin: EventEmitter<any> = new EventEmitter();

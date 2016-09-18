@@ -11,6 +11,9 @@ import {
     HomePageComponent,
     NotFoundPageComponent,
     GalleryPageComponent,
+    WhatsNewPageComponent,
+    ServicesPageComponent,
+    ContactPageComponent,
 
     // Admin
     AdminComponent,
@@ -44,7 +47,7 @@ export const routes: Routes = [
     },
     {
         path: 'whats-new',
-        component: AboutPageComponent
+        component: WhatsNewPageComponent
     },
     {
         path: 'about',
@@ -52,11 +55,11 @@ export const routes: Routes = [
     },
     {
         path: 'services',
-        component: AboutPageComponent
+        component: ServicesPageComponent
     },
     {
         path: 'contact',
-        component: AboutPageComponent
+        component: ContactPageComponent
     },
     {
         path: 'login',
@@ -73,27 +76,27 @@ export const adminRoutes: Routes = [
         children: [
             {
                 path: '',
-                component: ProfessionalServiceEditPageComponent
-            },
-            {
-                path: 'services',
                 component: ProfessionalServiceListPageComponent
             },
             {
-                path: 'service/create',
+                path: 'professionalServices',
+                component: ProfessionalServiceListPageComponent
+            },
+            {
+                path: 'professionalService/:id',
                 component: ProfessionalServiceEditPageComponent
             },
             {
-                path: 'service/edit/:id',
+                path: 'professionalService',
                 component: ProfessionalServiceEditPageComponent
+            },
+            {
+                path: 'professionalService/:serviceid/digitalasset/upload',
+                component: DigitalAssetUploadPageComponent
             },
             {
                 path: 'digitalassets',
                 component: DigitalAssetListPageComponent
-            },
-            {
-                path: 'digitalasset/upload',
-                component: DigitalAssetUploadPageComponent
             },
             {
                 path: 'photogalleries',
@@ -106,6 +109,10 @@ export const adminRoutes: Routes = [
             {
                 path: 'photogallery/edit/:id',
                 component: PhotoGalleryEditPageComponent
+            },
+            {
+                path: 'photogallery/:photogalleryid/digitalasset/upload',
+                component: DigitalAssetUploadPageComponent
             }
         ]
     },
@@ -120,6 +127,9 @@ export const routedComponents = [
     AboutPageComponent,
     HomePageComponent,
     GalleryPageComponent,
+    WhatsNewPageComponent,
+    ServicesPageComponent,
+    ContactPageComponent,
 
     LoginPageComponent,
 

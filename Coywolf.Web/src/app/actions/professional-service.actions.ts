@@ -14,7 +14,7 @@ export class ProfessionalServiceActions {
     public add(professionalService: ProfessionalService) {
         const newGuid = guid();
         this._professionalServiceService.add(professionalService)
-            .subscribe(book => {
+            .subscribe(professionalService => {
                 this._store.dispatch({
                     type: PROFESSIONAL_SERVICE_ADD_SUCCESS,
                     payload: professionalService

@@ -1,6 +1,8 @@
-<div class="edit-professional-service-page">
-    <h1>?</h1>
-    <!--<professional-service-editor (onSubmit)="onSubmit($event)" [entity]="entity$ | async">
-
-    </professional-service-editor>-->
+<div class="professional-service-edit-page">
+    <one-column-layout>
+        <professional-service-edit-form (onSubmit)="onSubmit($event)"
+                         *ngIf="(!_activatedRoute.snapshot.params['id']) || (_activatedRoute.snapshot.params['id'] && (entity$ | async)?.id)"
+                         [professionalService]="entity$ | async">
+        </professional-service-edit-form>
+    </one-column-layout>    
 </div>

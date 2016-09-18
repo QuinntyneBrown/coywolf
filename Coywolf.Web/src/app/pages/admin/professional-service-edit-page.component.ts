@@ -1,52 +1,36 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
-import { ProfessionalService } from "../../models";
-import { ActivatedRoute, Router } from "@angular/router";
+import { Component, Input, OnInit } from "@angular/core";
 import { ProfessionalServiceActions } from "../../actions";
+import { Router, ActivatedRoute } from "@angular/router";
 import { AppStore } from "../../store";
-import { pluck } from "../../utilities";
-import { Observable } from "rxjs";
 
 @Component({
     template: require("./professional-service-edit-page.component.html"),
     styles: [require("./professional-service-edit-page.component.scss")],
-    selector: "professional-service-edit-page",
-    changeDetection: ChangeDetectionStrategy.OnPush
+    selector: "professional-service-edit-page"
 })
-export class ProfessionalServiceEditPageComponent implements OnInit { 
-
-    constructor(
-        private _store: AppStore,
+export class ProfessionalServiceEditPageComponent { 
+    constructor(private _professionalServiceActions: ProfessionalServiceActions, 
+        private _router: Router,
         private _activatedRoute: ActivatedRoute,
-        private _professionalServiceActions: ProfessionalServiceActions,
-        private _router: Router
+        private _store: AppStore
     ) { }
 
     ngOnInit() {
-        if (this._entityId) {
-            this._professionalServiceActions.getById({
-                id: this._entityId
-            });
-        }
-
-        this._store.lastTriggeredActionId$
-            .subscribe(id => {
-                if (this.addOrUpdateId && id == this.addOrUpdateId) {
-                    this._router.navigate(["/admin/services"]);
-                }
-            });
+        this._professionalServiceActions.getById({ id: this._activatedRoute.snapshot.params["id"] });
     }
 
-    public onSubmit(options: { value: ProfessionalService }) {
-        alert("?");
-        this.addOrUpdateId = this._professionalServiceActions.add(options.value);
+    public get entity$() {
+        return this._store.professionalServiceById$(this._activatedRoute.snapshot.params["id"]);
     }
 
-    public get entity$(): Observable<ProfessionalService> {
-        return this._store.professionalServiceById$(this._entityId);
-    };
+    public onSubmit($event: any) {
+        this._professionalServiceActions.add({
+            id: $event.value.id,
+            name: $event.value.name,
+            description: $event.value.description
+        });
 
-    public get _entityId() { return this._activatedRoute.snapshot.params["id"]; }
-
-    public addOrUpdateId: string;
-
+        setTimeout(() => { this._router.navigate(["/admin/professionalServices"]); }, 0);
+        
+    }
 }
