@@ -12,7 +12,6 @@ export class ProfessionalServiceService {
     constructor(private _http: Http, private _oauthHelper: OAuthHelper) { }
 
     public add(entity: ProfessionalService) {
-        alert("works?");
         return this._http
             .post(`${apiCofiguration.baseUrl}/api/professionalservice/add`, entity, { headers: this._oauthHelper.getOAuthHeaders() })
             .map(data => data.json())

@@ -14,10 +14,12 @@ import {
     HtmlContentListComponent
 
 } from "./admin";
+
 import { PhotoGridComponent } from "./photo-grid.component";
 import { PageHeaderComponent } from "./page-header.component";
 import { OneColumnLayoutComponent } from "./one-column-layout.component";
 import { DigitalAssetUploadComponent } from "./digital-asset-upload.component";
+import { EditorComponent } from "./editor.component";
 
 const declarables = [
     LoginComponent,
@@ -28,7 +30,8 @@ const declarables = [
     OneColumnLayoutComponent,
     DigitalAssetUploadComponent,
     PhotoGridComponent,
-    
+    EditorComponent,
+
     ProfessionalServiceEditFormComponent,
     ProfessionalServiceListComponent,
 

@@ -1,6 +1,7 @@
 export * from "./admin";
 export * from "./components.module";
 export * from "./digital-asset-upload.component";
+export * from "./editor.component";
 export * from "./html-textarea.component";
 export * from "./login.component";
 export * from "./nav.component";

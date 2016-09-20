@@ -199,6 +199,9 @@
     <Content Include="dist\polyfills.js" />
     <Content Include="dist\vendor.js" />
     <Content Include="lib\jquery.min.js" />
+    <Content Include="lib\quill.core.css" />
+    <Content Include="lib\quill.min.js" />
+    <Content Include="lib\quill.snow.css" />
     <Content Include="lib\slick.min.js" />
     <Content Include="lib\tinymce.min.js" />
     <Content Include="packages.config" />
@@ -261,6 +264,9 @@
     </Content>
     <Content Include="src\app\components\digital-asset-upload.component.scss">
       <DependentUpon>digital-asset-upload.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\editor.component.html">
+      <DependentUpon>editor.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\components\html-textarea.component.html">
       <DependentUpon>html-textarea.component.ts</DependentUpon>
@@ -608,6 +614,7 @@
     <TypeScriptCompile Include="src\app\store\html-content.reducer.ts" />
     <TypeScriptCompile Include="src\app\services\local-storage.service.ts" />
     <TypeScriptCompile Include="src\app\components\html-textarea.component.ts" />
+    <TypeScriptCompile Include="src\app\components\editor.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

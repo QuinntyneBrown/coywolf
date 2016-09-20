@@ -6,8 +6,8 @@
             required
         </span>
     </form>
-
-    <html-textarea [(ngModel)]="description"></html-textarea>
+    
+    <editor [(ngModel)]="description" [style]="{'height':'320px'}"></editor>
 
     <button type="submit"
             (click)="tryToSubmit()"
