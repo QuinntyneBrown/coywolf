@@ -11,7 +11,11 @@ import {
     ProfessionalServiceEditFormComponent,
     ProfessionalServiceListComponent,
     HtmlContentEditFormComponent,
-    HtmlContentListComponent
+    HtmlContentListComponent,
+    DigitalAssetListComponent,
+    PhotoGalleryListComponent,
+    PhotoGalleryEditFormComponent
+    
 
 } from "./admin";
 
@@ -36,7 +40,12 @@ const declarables = [
     ProfessionalServiceListComponent,
 
     HtmlContentEditFormComponent,
-    HtmlContentListComponent
+    HtmlContentListComponent,
+
+    DigitalAssetListComponent,
+
+    PhotoGalleryListComponent,
+    PhotoGalleryEditFormComponent
 ];
 
 export const providers = [];

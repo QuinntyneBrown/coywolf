@@ -119,11 +119,11 @@ export const adminRoutes: Routes = [
                 component: PhotoGalleryListPageComponent
             },
             {
-                path: 'photogallery/create',
+                path: 'photogallery/:id',
                 component: PhotoGalleryEditPageComponent
             },
             {
-                path: 'photogallery/edit/:id',
+                path: 'photogallery',
                 component: PhotoGalleryEditPageComponent
             },
             {

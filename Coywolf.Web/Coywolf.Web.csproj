@@ -334,6 +334,12 @@
     <Content Include="src\app\pages\admin\digital-asset-upload-page.component.scss">
       <DependentUpon>digital-asset-upload-page.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\pages\admin\html-content-edit-page.component.html">
+      <DependentUpon>html-content-edit-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\admin\html-content-edit-page.component.scss">
+      <DependentUpon>html-content-edit-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\pages\admin\html-content-list-page.component.html">
       <DependentUpon>html-content-list-page.component.ts</DependentUpon>
     </Content>
@@ -423,8 +429,8 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="src\app\pages\admin\html-content-edit-page.component.scss" />
-    <Content Include="src\app\pages\admin\html-content-edit-page.component.html" />
+    <Content Include="src\app\components\admin\photo-gallery-edit-form.component.scss" />
+    <Content Include="src\app\components\admin\photo-gallery-edit-form.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -616,6 +622,7 @@
     <TypeScriptCompile Include="src\app\services\local-storage.service.ts" />
     <TypeScriptCompile Include="src\app\components\html-textarea.component.ts" />
     <TypeScriptCompile Include="src\app\components\editor.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\photo-gallery-edit-form.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

@@ -1,8 +1,9 @@
 namespace Coywolf.Migrations
 {
+    using Data;
     using System.Data.Entity.Migrations;
-    
-    internal sealed class Configuration : DbMigrationsConfiguration<Coywolf.Data.DataContext>
+
+    internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
     {
         public Configuration()
         {

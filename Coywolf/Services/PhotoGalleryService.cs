@@ -58,7 +58,7 @@ namespace Coywolf.Services
 
         public IQueryable<PhotoGallery> GetAll() => repository.GetAll()
             .Include(x => x.PhotoGalleryDigitalAssets)
-            .Include("GalleryPhotos.DigitalAsset");
+            .Include("PhotoGalleryDigitalAssets.DigitalAsset");
 
         protected readonly IUow uow;
         protected readonly IRepository<PhotoGallery> repository;
