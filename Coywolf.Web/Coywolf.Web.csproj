@@ -491,6 +491,7 @@
     <TypeScriptCompile Include="src\app\configuration\api-configuration.ts" />
     <TypeScriptCompile Include="src\app\configuration\index.ts" />
     <TypeScriptCompile Include="src\app\constants\get-current-user-success.ts" />
+    <TypeScriptCompile Include="src\app\constants\local-storage-id.ts" />
     <TypeScriptCompile Include="src\app\constants\user-logged-in.ts" />
     <TypeScriptCompile Include="src\app\constants\user-logged-out.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />

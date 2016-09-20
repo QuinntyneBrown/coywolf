@@ -8,6 +8,7 @@ export * from "./get-current-user-success";
 export * from "./html-content-add-success.action";
 export * from "./html-content-get-success.action";
 export * from "./html-content-remove-success.action";
+export * from "./local-storage-id";
 export * from "./photo-gallery-add-success.action";
 export * from "./photo-gallery-get-success.action";
 export * from "./photo-gallery-remove-success.action";

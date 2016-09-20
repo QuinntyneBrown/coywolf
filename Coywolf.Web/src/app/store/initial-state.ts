@@ -1,4 +1,5 @@
 ﻿import { AppState } from "./app-state";
+import { LocalStorageService } from "../services";
 
 export const initialState: AppState = {
     professionalServices: [],
@@ -8,5 +9,5 @@ export const initialState: AppState = {
     digitalAssets: [],
     currentUser: null,
     isLoggedIn: false,
-    token: null
+    token: LocalStorageService.get({ name: "accessToken" })
 };

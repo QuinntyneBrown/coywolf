@@ -3,6 +3,7 @@ import { Http, Headers } from "@angular/http";
 import { Observable } from "rxjs";
 import { OAuthHelper } from "../helpers";
 import { formEncode, extractData } from "../utilities";
+import { LocalStorageService } from "./local-storage.service";
 
 import { apiCofiguration } from "../configuration";
 
@@ -17,7 +18,11 @@ export class AuthenticationService {
         return this._http
             .post(`${apiCofiguration.baseUrl}/api/user/token`, formEncode(options), { headers: headers })
             .map(response => {
-                return response.json()["access_token"];
+                var accessToken = response.json()["access_token"];
+                LocalStorageService.put({
+                    name: "accessToken", value: accessToken
+                });
+                return accessToken;
             })
             .catch(err => {            
                 return Observable.of(false);

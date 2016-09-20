@@ -1,0 +1,1 @@
+﻿export const LOCALSTORAGE_ID = "f3fc5e84-c424-4450-a05b-3f25c2ca2e92";

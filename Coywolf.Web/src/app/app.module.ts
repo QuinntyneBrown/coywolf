@@ -14,6 +14,9 @@ import { ComponentsModule } from "./components";
 import { ServicesModule } from "./services";
 import { HelpersModule } from "./helpers";
 import { StoreModule } from "./store";
+import { LocalStorageService } from "./services";
+
+new LocalStorageService();
 
 import {
     RoutingModule,
