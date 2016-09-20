@@ -2,13 +2,24 @@ h1 {
     font-size:1.5em;
 }
 
-input, textarea, button {
+input, textarea {
     display:block;
     margin:15px 0px;
+}
+
+input {
+    width:100%;
+    max-width:400px;
+    padding: 5px 10px;
 }
 
 textarea {
     width: 600px;
 	height: 120px;	
 	padding: 5px;
+}
+
+button {
+    display:inline-block;
+    margin: 15px 0px;
 }

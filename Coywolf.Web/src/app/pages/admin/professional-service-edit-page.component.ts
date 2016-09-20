@@ -23,6 +23,10 @@ export class ProfessionalServiceEditPageComponent {
         return this._store.professionalServiceById$(this._activatedRoute.snapshot.params["id"]);
     }
 
+    public onCancel() {
+        setTimeout(() => { this._router.navigate(["/admin/professionalServices"]); }, 0);
+    }
+
     public onSubmit($event: any) {
         this._professionalServiceActions.add({
             id: $event.value.id,

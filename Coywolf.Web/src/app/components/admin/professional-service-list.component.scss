@@ -7,12 +7,24 @@ a {
     display:inline-block;    
 }
 
+td {
+    padding:5px 10px;
+}
+
 .professional-service-list-item-count {
     min-width:25px;
 }
 
 .professional-service-list-item-name {
     min-width:200px;
+}
+
+.professional-service-list-item-name-column {
+    min-width:300px;
+}
+
+.professional-service-list-header {
+    font-weight:600;
 }
 
 .professional-service-list-item-action {

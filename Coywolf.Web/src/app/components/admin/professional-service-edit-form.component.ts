@@ -39,6 +39,8 @@ export class ProfessionalServiceEditFormComponent implements AfterViewInit, OnIn
 	    
     @Input() public professionalService: ProfessionalService;
     @Output() public onSubmit = new EventEmitter();
+    @Output() public onCancel = new EventEmitter();
+
     public form = new FormGroup({
         id: new FormControl("", []),
         name: new FormControl("", [

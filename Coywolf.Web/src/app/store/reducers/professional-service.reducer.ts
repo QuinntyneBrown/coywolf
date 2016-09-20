@@ -7,7 +7,7 @@ import { addOrUpdate, pluckOut } from "../../utilities";
 
 export const professionalServicesReducer = (state: AppState = initialState, action: Action) => {
     switch (action.type) {
-        case PROFESSIONAL_SERVICE_ADD_SUCCESS:
+        case PROFESSIONAL_SERVICE_ADD_SUCCESS:            
             var entities: Array<ProfessionalService> = state.professionalServices;
             var entity: ProfessionalService = action.payload;
             addOrUpdate({ items: entities, item: entity});            

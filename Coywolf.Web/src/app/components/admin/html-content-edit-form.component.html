@@ -7,12 +7,16 @@
         </span>
     </form>
 
-    <html-textarea [(ngModel)]="htmlBody"></html-textarea>
+    <editor [(ngModel)]="htmlBody" [style]="{'height':'320px'}"></editor>
 
     <button type="submit"
             (click)="tryToSubmit()"
             [disabled]="form.invalid">
         Submit
+    </button>
+
+    <button (click)="onCancel.emit()">
+        Cancel
     </button>
 
 </section>

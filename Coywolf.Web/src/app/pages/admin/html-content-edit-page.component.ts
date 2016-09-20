@@ -35,4 +35,8 @@ export class HtmlContentEditPageComponent {
         setTimeout(() => { this._router.navigate(["/admin/htmlContents"]); }, 0);
         
     }
+
+    public onCancel() {
+        setTimeout(() => { this._router.navigate(["/admin/htmlContents"]); }, 0);
+    }
 }
